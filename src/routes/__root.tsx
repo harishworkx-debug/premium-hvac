@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Keller Heating And Cooling LLC — Premium Heating & Cooling Services" },
       { name: "description", content: "Trusted local HVAC contractor for AC repair, heating, furnace and indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
       { name: "author", content: "Keller Heating And Cooling LLC" },
-      { name: "google-site-verification", content: "-G0IXsNLn79aFSkFRvcaCLZLJxODUN0Oc2HznFncAi8" },
+      { name: "google-site-verification", content: "pqF6a9yh2V3BWMc2txdyEDE_XNwaMLfw0M8U1CCxOSk" },
       { property: "og:title", content: "Keller Heating And Cooling LLC — Premium Heating & Cooling Services" },
       { property: "og:description", content: "Trusted local HVAC contractor for AC repair, heating, furnace and indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
       { property: "og:type", content: "website" },
