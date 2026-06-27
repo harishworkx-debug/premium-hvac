@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { ALL_SEO_SLUGS } from "@/data/seo-pages";
 
 const BASE_URL = "https://premium-hvac-glow.lovable.app";
 
-// Pages with priority levels for Google
-const priorityPages: { path: string; priority: string; changefreq: string }[] = [
+type SitemapPage = { path: string; priority: string; changefreq: string };
+
+// Core public pages that exist on the site.
+const priorityPages: SitemapPage[] = [
   { path: "/", priority: "1.0", changefreq: "daily" },
   { path: "/services", priority: "0.9", changefreq: "weekly" },
   { path: "/service-area", priority: "0.8", changefreq: "weekly" },
@@ -16,14 +17,15 @@ const priorityPages: { path: string; priority: string; changefreq: string }[] = 
   { path: "/emergency", priority: "0.9", changefreq: "weekly" },
 ];
 
-// Dynamic service pages
-const seoPaths = ALL_SEO_SLUGS.map(s => ({
-  path: `/${s}/`,
-  priority: "0.8",
-  changefreq: "weekly" as const,
-}));
+// High-value SEO landing pages that are currently supported by the app.
+const seoLandingPages: SitemapPage[] = [
+  { path: "/ac-repair-beaver-falls-pa/", priority: "0.85", changefreq: "weekly" },
+  { path: "/ac-installation-beaver-falls-pa/", priority: "0.82", changefreq: "weekly" },
+  { path: "/heating-repair-beaver-falls-pa/", priority: "0.82", changefreq: "weekly" },
+  { path: "/ac-repair-pittsburgh-pa/", priority: "0.8", changefreq: "weekly" },
+];
 
-const allPages = [...priorityPages, ...seoPaths];
+const allPages = [...priorityPages, ...seoLandingPages];
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
