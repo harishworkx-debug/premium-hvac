@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { ALL_SEO_SLUGS } from "@/data/seo-pages";
 
-const BASE_URL = "https://premium-hvac-glow.lovable.app";
+const BASE_URL = "https://www.kellerheatingandcooling.com";
 
 type SitemapPage = { path: string; priority: string; changefreq: string };
 
-// Core public pages that exist on the site.
 const priorityPages: SitemapPage[] = [
   { path: "/", priority: "1.0", changefreq: "daily" },
   { path: "/services", priority: "0.9", changefreq: "weekly" },
@@ -17,15 +17,13 @@ const priorityPages: SitemapPage[] = [
   { path: "/emergency", priority: "0.9", changefreq: "weekly" },
 ];
 
-// High-value SEO landing pages that are currently supported by the app.
-const seoLandingPages: SitemapPage[] = [
-  { path: "/ac-repair-beaver-falls-pa/", priority: "0.85", changefreq: "weekly" },
-  { path: "/ac-installation-beaver-falls-pa/", priority: "0.82", changefreq: "weekly" },
-  { path: "/heating-repair-beaver-falls-pa/", priority: "0.82", changefreq: "weekly" },
-  { path: "/ac-repair-pittsburgh-pa/", priority: "0.8", changefreq: "weekly" },
-];
+const seoPages: SitemapPage[] = ALL_SEO_SLUGS.map(slug => ({
+  path: `/${slug}/`,
+  priority: "0.8",
+  changefreq: "weekly",
+}));
 
-const allPages = [...priorityPages, ...seoLandingPages];
+const allPages = [...priorityPages, ...seoPages];
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
