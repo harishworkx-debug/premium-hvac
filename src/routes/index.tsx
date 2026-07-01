@@ -6,29 +6,70 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import heroImg from "@/assets/hero-hvac.jpg";
-import beforeImg from "@/assets/before.jpg";
-import afterImg from "@/assets/after.jpg";
 import { LOCATIONS } from "@/data/seo-pages";
 
+// Using stock images from Pexels for hero and before/after sections
+const heroImg = "https://images.pexels.com/photos/1095814/pexels-photo-1095814.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const beforeImg = "https://images.pexels.com/photos/2750278/pexels-photo-2750278.jpeg?auto=compress&cs=tinysrgb&w=1200";
+const afterImg = "https://images.pexels.com/photos/1095814/pexels-photo-1095814.jpeg?auto=compress&cs=tinysrgb&w=1200";
+
+const BASE_URL = "https://www.kellerheatingandcooling.com";
+
+const homePageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/#webpage`,
+      name: "Keller Heating And Cooling LLC — Heating, Cooling & Air Quality Experts",
+      description: "Premium HVAC contractor offering AC repair, heating installation, furnace service & indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured.",
+      url: BASE_URL,
+      isPartOf: { "@id": `${BASE_URL}/#website` },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${BASE_URL}/#faqpage`,
+      mainEntity: [
+        { "@type": "Question", name: "How often should HVAC systems be serviced?", acceptedAnswer: { "@type": "Answer", text: "At least twice a year — once in the spring for your AC and once in the fall for your heating — for optimal performance and energy efficiency." }},
+        { "@type": "Question", name: "Do you provide emergency HVAC services?", acceptedAnswer: { "@type": "Answer", text: "Yes. Emergency support is available with fast response times across Greater Pittsburgh area." }},
+        { "@type": "Question", name: "Can you install energy-efficient systems?", acceptedAnswer: { "@type": "Answer", text: "Yes. We provide modern, energy-efficient HVAC solutions that help reduce energy consumption and lower utility costs." }},
+        { "@type": "Question", name: "Do you offer commercial HVAC services?", acceptedAnswer: { "@type": "Answer", text: "Yes, we serve businesses of all sizes with HVAC installation, preventive maintenance, system upgrades and commercial repairs." }},
+        { "@type": "Question", name: "Are your technicians licensed?", acceptedAnswer: { "@type": "Answer", text: "Every Keller Heating And Cooling LLC technician is licensed, insured and committed to honest, dependable workmanship." }},
+      ],
+    },
+  ],
+};
+
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Keller Heating And Cooling LLC — Heating, Cooling & Air Quality Experts" },
-      { name: "description", content: "Premium HVAC contractor offering AC repair, heating installation, furnace service & indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
-      { property: "og:title", content: "Keller Heating And Cooling LLC — Heating & Cooling Experts" },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a }})),
-      }),
-    }],
-  }),
+  head: () => {
+    const url = `${BASE_URL}/`;
+    const title = "HVAC Contractor in Beaver Falls, PA | AC Repair & Heating Services";
+    const description = "Keller Heating And Cooling LLC: Premium HVAC contractor for AC repair, heating installation, furnace service & indoor air quality. 24/7 emergency service, free estimates. Licensed & insured. Call (724) 676-8738.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { name: "keywords", content: "HVAC contractor Beaver Falls, AC repair Pittsburgh, heating repair, furnace installation, air conditioning service, emergency HVAC, indoor air quality, licensed HVAC" },
+        { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Keller Heating And Cooling LLC" },
+        { property: "og:locale", content: "en_US" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(homePageSchema),
+        },
+      ],
+    };
+  },
   component: HomePage,
 });
 

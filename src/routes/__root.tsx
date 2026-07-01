@@ -15,6 +15,135 @@ import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { StickyContact } from "../components/StickyContact";
 
+const BASE_URL = "https://www.kellerheatingandcooling.com";
+
+const businessStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HVACBusiness",
+      "@id": `${BASE_URL}/#business`,
+      name: "Keller Heating And Cooling LLC",
+      alternateName: "Keller Heating & Cooling",
+      description: "Premium HVAC contractor offering AC repair, heating installation, furnace service, and indoor air quality solutions. Serving Pittsburgh and surrounding areas with 24/7 emergency service.",
+      url: BASE_URL,
+      telephone: "+1-724-676-8738",
+      email: "info@kellerheatingandcooling.com",
+      faxNumber: "+1-724-XXX-XXXX",
+      image: `${BASE_URL}/og-image.png`,
+      logo: `${BASE_URL}/logo.png`,
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Beaver Falls",
+        addressLocality: "Pittsburgh",
+        addressRegion: "PA",
+        postalCode: "15010",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.7884",
+        longitude: "-80.3332",
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "150",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Beaver Falls",
+          containedInPlace: { "@type": "State", name: "Pennsylvania" },
+        },
+        {
+          "@type": "City",
+          name: "Pittsburgh",
+          containedInPlace: { "@type": "State", name: "Pennsylvania" },
+        },
+        {
+          "@type": "County",
+          name: "Allegheny County",
+        },
+        {
+          "@type": "County",
+          name: "Beaver County",
+        },
+        {
+          "@type": "County",
+          name: "Washington County",
+        },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "HVAC Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "AC Installation" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "AC Repair" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heating Installation" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heating Repair" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Furnace Repair" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heat Pump Installation" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Duct Cleaning" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Emergency HVAC" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial HVAC" } },
+        ],
+      },
+      sameAs: [
+        "https://www.facebook.com/kellerheatingandcooling",
+        "https://www.instagram.com/kellerheatingandcooling",
+      ],
+    },
+    {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "Keller Heating And Cooling LLC",
+      url: BASE_URL,
+      logo: `${BASE_URL}/logo.png`,
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-724-676-8738",
+        contactType: "customer service",
+        availableLanguage: ["English"],
+        areaServed: "US",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      url: BASE_URL,
+      name: "Keller Heating And Cooling LLC",
+      publisher: { "@id": `${BASE_URL}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${BASE_URL}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${BASE_URL}/#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
+        },
+      ],
+    },
+  ],
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -80,39 +209,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Keller Heating And Cooling LLC — Premium Heating & Cooling Services" },
-      { name: "description", content: "Trusted local HVAC contractor for AC repair, heating, furnace and indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
+      { name: "theme-color", content: "#1a2848" },
+      { name: "msapplication-TileColor", content: "#3b8eb5" },
       { name: "author", content: "Keller Heating And Cooling LLC" },
+      { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+      { name: "googlebot", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
       { name: "google-site-verification", content: "pqF6a9yh2V3BWMc2txdyEDE_XNwaMLfw0M8U1CCxOSk" },
-      { property: "og:title", content: "Keller Heating And Cooling LLC — Premium Heating & Cooling Services" },
-      { property: "og:description", content: "Trusted local HVAC contractor for AC repair, heating, furnace and indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
-      { property: "og:type", content: "website" },
+      { name: "keywords", content: "HVAC, AC repair, heating, furnace, air conditioning, Beaver Falls, Pittsburgh, PA, HVAC contractor, emergency HVAC, heating and cooling" },
       { property: "og:site_name", content: "Keller Heating And Cooling LLC" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Keller Heating And Cooling LLC — Premium Heating & Cooling Services" },
-      { name: "twitter:description", content: "Trusted local HVAC contractor for AC repair, heating, furnace and indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e37564f0-1142-4f7b-9269-53193e9fc21c/id-preview-91b988a3--8340f914-deb4-4505-97f7-6edcc4aadc07.lovable.app-1781760864052.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e37564f0-1142-4f7b-9269-53193e9fc21c/id-preview-91b988a3--8340f914-deb4-4505-97f7-6edcc4aadc07.lovable.app-1781760864052.png" },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:site", content: "@kellerheating" },
+      { name: "twitter:creator", content: "@kellerheating" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" },
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "canonical", href: BASE_URL },
     ],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "HVACBusiness",
-        name: "Keller Heating And Cooling LLC",
-        telephone: "+1-724-676-8738",
-        email: "info@kellerheatingandcooling.com",
-        address: { "@type": "PostalAddress", addressLocality: "Pittsburgh", addressRegion: "PA", addressCountry: "US" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150" },
-        openingHours: "Mo-Su 00:00-23:59",
-      }),
-    }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(businessStructuredData),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
