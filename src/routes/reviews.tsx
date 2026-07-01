@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
+
+const BASE_URL = "https://www.kellerheatingandcooling.com";
+
 const reviews = [
   {
     n: "Jimmie Lee DiIanni",
@@ -55,15 +58,74 @@ const reviews = [
   }
 ];
 
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ReviewPage",
+      "@id": `${BASE_URL}/reviews/#webpage`,
+      name: "Customer Reviews | Keller Heating And Cooling LLC",
+      description: "Read verified customer reviews for Keller Heating And Cooling LLC. 4.9 star average from 150+ satisfied customers in Pittsburgh and surrounding areas.",
+      url: `${BASE_URL}/reviews/`,
+      isPartOf: { "@id": `${BASE_URL}/#website` },
+    },
+    {
+      "@type": "AggregateRating",
+      "@id": `${BASE_URL}/reviews/#aggregaterating`,
+      ratingValue: "4.9",
+      reviewCount: "150",
+      bestRating: "5",
+      worstRating: "1",
+      itemReviewed: {
+        "@type": "HVACBusiness",
+        name: "Keller Heating And Cooling LLC",
+      },
+    },
+    ...reviews.slice(0, 10).map((r, i) => ({
+      "@type": "Review",
+      "@id": `${BASE_URL}/reviews/#review-${i + 1}`,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      author: {
+        "@type": "Person",
+        name: r.n,
+      },
+      reviewBody: r.t,
+      itemReviewed: {
+        "@type": "HVACBusiness",
+        name: "Keller Heating And Cooling LLC",
+      },
+    })),
+  ],
+};
+
 export const Route = createFileRoute("/reviews")({
-  head: () => ({
-    meta: [
-      { title: "Reviews — 4.9★ from 150+ Customers | Keller Heating And Cooling LLC" },
-      { name: "description", content: "Read real reviews from Keller Heating And Cooling LLC customers across Greater Pittsburgh. 4.9 star average from 150+ verified reviews." },
-      { property: "og:title", content: "Keller Heating And Cooling LLC Reviews" }, { property: "og:url", content: "/reviews" },
-    ],
-    links: [{ rel: "canonical", href: "/reviews" }],
-  }),
+  head: () => {
+    const url = `${BASE_URL}/reviews/`;
+    const title = "Customer Reviews | 4.9★ Rated HVAC Contractor in Pittsburgh";
+    const description = "Read 150+ verified reviews from satisfied customers. Keller Heating And Cooling LLC is rated 4.9 stars for AC repair, heating service, and HVAC installation in Pittsburgh & Beaver Falls, PA.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { name: "keywords", content: "HVAC reviews, heating cooling reviews, Pittsburgh HVAC ratings, furnace repair reviews, AC service testimonials" },
+        { name: "robots", content: "index, follow" },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Keller Heating And Cooling LLC" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [{ type: "application/ld+json", children: JSON.stringify(reviewsSchema) }],
+    };
+  },
   component: () => (
     <>
       <PageHero eyebrow="Reviews" title="4.9★ from 150+ verified reviews" sub="Don't take our word for it — here's what your neighbors are saying." />

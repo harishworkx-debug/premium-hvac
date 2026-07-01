@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle2, Phone, ArrowRight, MapPin, Star, ShieldCheck, Clock } from "lucide-react";
 import { parseSlug, SERVICES, LOCATIONS, PRIMARY_LOCATION } from "@/data/seo-pages";
 
+const BASE_URL = "https://www.kellerheatingandcooling.com";
+
 export const Route = createFileRoute("/$slug")({
   loader: ({ params }) => {
     const data = parseSlug(params.slug);
@@ -12,30 +14,137 @@ export const Route = createFileRoute("/$slug")({
     return data;
   },
   head: ({ params, loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Not Found" }] };
-    const path = `/${params.slug}/`;
-    const url = `https://premium-hvac-glow.lovable.app${path}`;
+    if (!loaderData) return { meta: [{ title: "Not Found - Keller Heating & Cooling" }] };
+
+    const slugPath = params.slug;
+    const url = `${BASE_URL}/${slugPath}/`;
     let title = "";
     let description = "";
+    let keywords = "";
+    let structuredData: object = {};
+
     if (loaderData.kind === "service") {
       const { service, location } = loaderData;
-      title = `${service.name} in ${location.name}, ${location.state} | Keller Heating & Cooling`;
-      description = `Trusted ${service.name.toLowerCase()} in ${location.name}, ${location.state}. Licensed, insured, NATE-certified technicians · upfront pricing · 24/7 emergency service. Call (724) 676-8738.`;
+      title = `${service.name} in ${location.name}, PA | 24/7 HVAC Contractor`;
+      description = `Trusted ${service.name.toLowerCase()} experts in ${location.name}, PA. NATE-certified technicians, same-day service, flat-rate pricing. Licensed & insured. Call (724) 676-8738.`;
+      keywords = `${service.name.toLowerCase()} ${location.name} PA, HVAC contractor ${location.name}, ${service.name.toLowerCase()} near me, heating cooling ${location.name}`;
+
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: `${service.name} in ${location.name}, PA`,
+        serviceType: service.name,
+        description: service.intro,
+        provider: {
+          "@type": "HVACBusiness",
+          "@id": `${BASE_URL}/#business`,
+          name: "Keller Heating And Cooling LLC",
+          telephone: "+1-724-676-8738",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: location.name,
+            addressRegion: "PA",
+            addressCountry: "US",
+          },
+          areaServed: {
+            "@type": "GeoCircle",
+            geoMidpoint: {
+              "@type": "GeoCoordinates",
+              latitude: "40.7884",
+              longitude: "-80.3332",
+            },
+            geoRadius: "50 mi",
+          },
+        },
+        areaServed: {
+          "@type": "City",
+          name: location.name,
+          containedInPlace: {
+            "@type": "State",
+            name: "Pennsylvania",
+          },
+        },
+        offers: {
+          "@type": "Offer",
+          availability: "https://schema.org/InStock",
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            priceCurrency: "USD",
+          },
+        },
+      };
     } else {
       const { location } = loaderData;
-      title = `AC Repair and HVAC Services in ${location.name}, PA | Keller Heating & Cooling`;
-      description = `Same-day AC repair and full HVAC services in ${location.name}, PA. 4.9★ · 150+ reviews · licensed & insured. Call (724) 676-8738 for fast service.`;
+      title = `AC Repair & HVAC Services in ${location.name}, PA | Keller Heating`;
+      description = `24/7 AC repair, heating installation & HVAC services in ${location.name}, PA. Same-day service, 4.9★ rated, licensed & insured. Free estimates. Call (724) 676-8738.`;
+      keywords = `AC repair ${location.name} PA, HVAC ${location.name}, air conditioning repair, heating repair, furnace service ${location.name}`;
+
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": `${BASE_URL}/${slugPath}/#localbusiness`,
+        name: `Keller Heating And Cooling LLC - ${location.name}`,
+        description: `Professional HVAC services including AC repair, heating installation, and furnace service in ${location.name}, PA.`,
+        url: url,
+        telephone: "+1-724-676-8738",
+        email: "info@kellerheatingandcooling.com",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: location.name,
+          addressRegion: "PA",
+          addressCountry: "US",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: "40.7884",
+          longitude: "-80.3332",
+        },
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          reviewCount: "150",
+          bestRating: "5",
+          worstRating: "1",
+        },
+        priceRange: "$$",
+        areaServed: {
+          "@type": "City",
+          name: location.name,
+        },
+      };
     }
+
     return {
       meta: [
         { title },
         { name: "description", content: description },
+        { name: "keywords", content: keywords },
+        { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Keller Heating And Cooling LLC" },
+        { property: "og:locale", content: "en_US" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
       ],
-      links: [{ rel: "canonical", href: url }],
+      links: [
+        { rel: "canonical", href: url },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(structuredData),
+        },
+      ],
     };
   },
   component: SeoPage,
@@ -110,6 +219,8 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
                 <li><Link to="/service-area" className="text-teal hover:underline">Service Area</Link></li>
                 <li><Link to="/services" className="text-teal hover:underline">All HVAC Services</Link></li>
                 <li><Link to="/contact" className="text-teal hover:underline">Contact Us</Link></li>
+                <li><Link to="/emergency" className="text-teal hover:underline">Emergency HVAC</Link></li>
+                <li><Link to="/reviews" className="text-teal hover:underline">Customer Reviews</Link></li>
               </ul>
             </Card>
           </aside>
@@ -205,6 +316,8 @@ function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { 
                 <li><Link to="/service-area" className="text-teal hover:underline">Service Area</Link></li>
                 <li><Link to="/services" className="text-teal hover:underline">All Services</Link></li>
                 <li><Link to="/contact" className="text-teal hover:underline">Contact Us</Link></li>
+                <li><Link to="/emergency" className="text-teal hover:underline">Emergency HVAC</Link></li>
+                <li><Link to="/reviews" className="text-teal hover:underline">Customer Reviews</Link></li>
               </ul>
             </Card>
           </aside>
