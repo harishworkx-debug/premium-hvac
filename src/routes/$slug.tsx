@@ -11,7 +11,13 @@ export const Route = createFileRoute("/$slug")({
   loader: ({ params }) => {
     const data = parseSlug(params.slug);
     if (!data) throw notFound();
-    return data;
+    
+    // Remove the icon (React component) so it can be serialized by Seroval safely
+    const { icon, ...serviceWithoutIcon } = data.service;
+    return {
+      ...data,
+      service: serviceWithoutIcon as any,
+    };
   },
   head: ({ params, loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Not Found - Keller Heating & Cooling" }] };
