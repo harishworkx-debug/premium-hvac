@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Phone, ShieldCheck, Clock, BadgeCheck, Wrench, Snowflake, Flame, Wind, Sparkles, Building2, Siren, ArrowRight, Star, CheckCircle2, Calendar, ClipboardCheck, HardHat, ThumbsUp, MapPin } from "lucide-react";
+import { Phone, ShieldCheck, Clock, BadgeCheck, Wrench, Snowflake, Flame, Wind, Sparkles, Building2, Siren, ArrowRight, Star, CircleCheck as CheckCircle2, Calendar, ClipboardCheck, HardHat, ThumbsUp, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -164,7 +164,7 @@ function Hero() {
               <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
             </Button>
             <Button asChild variant="hero" size="xl">
-              <a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call Now: (724) 676-8738</a>
+              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call Now: (724) 676-8738</a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
@@ -266,7 +266,7 @@ function Commercial() {
               </Link>
             </Button>
             <Button asChild variant="hero" size="lg">
-              <a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738</a>
+              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a>
             </Button>
           </div>
         </div>
@@ -484,7 +484,7 @@ function CTABanner() {
             <h2 className="text-3xl md:text-5xl font-bold">Need HVAC Service Today?</h2>
             <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">Our emergency techs are standing by 24/7. No overtime fees. No surprises.</p>
             <Button asChild variant="cta" size="xl" className="mt-8">
-              <a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738 Now</a>
+              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738 Now</a>
             </Button>
           </div>
         </div>
@@ -500,7 +500,7 @@ function Contact() {
         <div>
           <SectionHead align="left" eyebrow="Get In Touch" title="Request a Free Estimate" sub="Tell us about your project and we'll get back to you within 30 minutes during business hours." />
           <div className="mt-8 space-y-5">
-            <InfoRow icon={Phone} label="Phone" value="(724) 676-8738" href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer" />
+            <InfoRow icon={Phone} label="Phone" value="(724) 676-8738" href="tel:+17246768738" />
             <InfoRow icon={MapPin} label="Service Area" value="Pittsburgh, PA & Surrounding Areas" />
             <InfoRow icon={Clock} label="Business Hours" value="Mon–Sun · 24/7 Emergency Service" />
           </div>

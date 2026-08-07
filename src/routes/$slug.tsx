@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Phone, ArrowRight, MapPin, Star, ShieldCheck, Clock } from "lucide-react";
+import { CircleCheck as CheckCircle2, Phone, ArrowRight, MapPin, Star, ShieldCheck, Clock } from "lucide-react";
 import { parseSlug, SERVICES, LOCATIONS, PRIMARY_LOCATION } from "@/data/seo-pages";
 
 const BASE_URL = "https://www.kellerheatingandcooling.com";
@@ -172,7 +172,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
         sub={service.intro}
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
           <Button asChild variant="hero" size="lg"><Link to="/contact">Get a Free Estimate <ArrowRight className="w-5 h-5" /></Link></Button>
         </div>
       </PageHero>
@@ -199,7 +199,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
               <h3 className="text-2xl md:text-3xl font-bold">Ready for {service.name} in {location.name}?</h3>
               <p className="mt-3 text-white/80">Same-day appointments available. Call now or request a free written estimate.</p>
               <div className="mt-6 flex flex-wrap gap-3 justify-center">
-                <Button asChild variant="cta" size="xl"><a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+                <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
                 <Button asChild variant="hero" size="xl"><Link to="/contact">Book Online</Link></Button>
               </div>
             </div>
@@ -248,7 +248,7 @@ function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { 
         sub={`Local, licensed and insured HVAC contractor serving ${location.name} and surrounding neighborhoods with same-day service.`}
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
           <Button asChild variant="hero" size="lg"><Link to="/contact">Get a Free Estimate <ArrowRight className="w-5 h-5" /></Link></Button>
         </div>
       </PageHero>
@@ -296,7 +296,7 @@ function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { 
               <h3 className="text-2xl md:text-3xl font-bold">Need HVAC Service in {location.name} Today?</h3>
               <p className="mt-3 text-white/80">Call now for fast, reliable heating and cooling solutions.</p>
               <div className="mt-6 flex flex-wrap gap-3 justify-center">
-                <Button asChild variant="cta" size="xl"><a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+                <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
                 <Button asChild variant="hero" size="xl"><Link to="/contact">Book Online</Link></Button>
               </div>
             </div>
