@@ -83,7 +83,7 @@ export const Route = createFileRoute("/service-area")({
                 <li><strong>Allegheny County:</strong> Pittsburgh, Mt. Lebanon, Bethel Park, Monroeville, Cranberry Township, Wexford, McCandless, Ross Township, Shaler, Penn Hills, Plum, Upper St. Clair, Robinson</li>
                 <li><strong>Beaver County:</strong> Beaver Falls, Aliquippa, Ambridge, Monaca</li>
                 <li><strong>Washington County:</strong> Canonsburg, Peters Township, McMurray</li>
-                <li className="text-teal font-medium">Don't see your town? Call (724) 676-8738 — we likely serve your area!</li>
+                <li className="text-teal font-medium">Don't see your town? Call (724) 497-8681 — we likely serve your area!</li>
               </ul>
             </div>
           </div>

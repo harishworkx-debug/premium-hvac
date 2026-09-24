@@ -196,7 +196,7 @@ Each location page includes:
 ### 2.3 NAP Consistency
 - Name: Keller Heating And Cooling LLC
 - Address: Pittsburgh/Beaver Falls, PA
-- Phone: (724) 676-8738 (consistent across all pages)
+- Phone: (724) 497-8681 (consistent across all pages)
 
 ---
 
@@ -341,7 +341,7 @@ Schema.org BreadcrumbList implemented on all pages
 
 ### 9.3 Business Description (750 chars recommended)
 
-"Keller Heating And Cooling LLC is a family-owned HVAC contractor serving Pittsburgh, Beaver Falls, and surrounding communities since 2008. Our NATE-certified technicians provide premium heating, cooling, and indoor air quality services for residential and commercial customers. We offer 24/7 emergency service with no overtime fees, flat-rate upfront pricing, and a 100% satisfaction guarantee on all work. Services include AC installation and repair, furnace service, heat pump installation, duct cleaning, and commercial HVAC maintenance. Licensed and insured in Pennsylvania (License #HVAC-44892). Call us anytime at (724) 676-8738 for a free estimate."
+"Keller Heating And Cooling LLC is a family-owned HVAC contractor serving Pittsburgh, Beaver Falls, and surrounding communities since 2008. Our NATE-certified technicians provide premium heating, cooling, and indoor air quality services for residential and commercial customers. We offer 24/7 emergency service with no overtime fees, flat-rate upfront pricing, and a 100% satisfaction guarantee on all work. Services include AC installation and repair, furnace service, heat pump installation, duct cleaning, and commercial HVAC maintenance. Licensed and insured in Pennsylvania (License #HVAC-44892). Call us anytime at (724) 497-8681 for a free estimate."
 
 ### 9.4 Service Areas
 - Pittsburgh, PA
@@ -365,10 +365,10 @@ Schema.org BreadcrumbList implemented on all pages
 
 ### 9.6 Review Response Strategy
 **Template for Positive Reviews:**
-"Thank you [Name] for the wonderful review! We're so glad we could help with your [service performed]. Our team takes pride in delivering dependable HVAC service to our neighbors in [Location]. Don't hesitate to call us at (724) 676-8738 if you need anything in the future!"
+"Thank you [Name] for the wonderful review! We're so glad we could help with your [service performed]. Our team takes pride in delivering dependable HVAC service to our neighbors in [Location]. Don't hesitate to call us at (724) 497-8681 if you need anything in the future!"
 
 **Template for Negative Reviews:**
-"We're sorry to hear about your experience, [Name]. We take all feedback seriously and would like the opportunity to make things right. Please call our office at (724) 676-8738 and ask for [owner/manager name] so we can address your concerns directly."
+"We're sorry to hear about your experience, [Name]. We take all feedback seriously and would like the opportunity to make things right. Please call our office at (724) 497-8681 and ask for [owner/manager name] so we can address your concerns directly."
 
 ---
 
