@@ -72,7 +72,7 @@ export const Route = createFileRoute("/emergency")({
   component: () => (
     <>
       <PageHero eyebrow="Emergency" title="24/7 Emergency HVAC Service" sub="No heat? No cooling? Strange smells or sounds? Call us now — real humans answering, real techs dispatched within the hour.">
-        <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+        <Button asChild variant="cta" size="xl"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
       </PageHero>
       <section className="section">
         <div className="container-px mx-auto max-w-5xl grid sm:grid-cols-3 gap-5">
@@ -112,7 +112,7 @@ export const Route = createFileRoute("/emergency")({
             <h3 className="text-2xl md:text-3xl font-bold">Need Emergency HVAC Service Now?</h3>
             <p className="mt-3 text-white/80">Real humans answer 24/7. No automated menus, no waiting.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Callback</Link></Button>
             </div>
           </div>
