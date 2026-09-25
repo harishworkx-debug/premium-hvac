@@ -30,11 +30,11 @@ const homePageSchema = {
       "@type": "FAQPage",
       "@id": `${BASE_URL}/#faqpage`,
       mainEntity: [
-        { "@type": "Question", name: "How often should HVAC systems be serviced?", acceptedAnswer: { "@type": "Answer", text: "At least twice a year — once in the spring for your AC and once in the fall for your heating — for optimal performance and energy efficiency." }},
-        { "@type": "Question", name: "Do you provide emergency HVAC services?", acceptedAnswer: { "@type": "Answer", text: "Yes. Emergency support is available with fast response times across Greater Pittsburgh area." }},
-        { "@type": "Question", name: "Can you install energy-efficient systems?", acceptedAnswer: { "@type": "Answer", text: "Yes. We provide modern, energy-efficient HVAC solutions that help reduce energy consumption and lower utility costs." }},
-        { "@type": "Question", name: "Do you offer commercial HVAC services?", acceptedAnswer: { "@type": "Answer", text: "Yes, we serve businesses of all sizes with HVAC installation, preventive maintenance, system upgrades and commercial repairs." }},
-        { "@type": "Question", name: "Are your technicians licensed?", acceptedAnswer: { "@type": "Answer", text: "Every Keller Heating And Cooling LLC technician is licensed, insured and committed to honest, dependable workmanship." }},
+        { "@type": "Question", name: "How often should HVAC systems be serviced?", acceptedAnswer: { "@type": "Answer", text: "At least twice a year — once in the spring for your AC and once in the fall for your heating — for optimal performance and energy efficiency." } },
+        { "@type": "Question", name: "Do you provide emergency HVAC services?", acceptedAnswer: { "@type": "Answer", text: "Yes. Emergency support is available with fast response times across Greater Pittsburgh area." } },
+        { "@type": "Question", name: "Can you install energy-efficient systems?", acceptedAnswer: { "@type": "Answer", text: "Yes. We provide modern, energy-efficient HVAC solutions that help reduce energy consumption and lower utility costs." } },
+        { "@type": "Question", name: "Do you offer commercial HVAC services?", acceptedAnswer: { "@type": "Answer", text: "Yes, we serve businesses of all sizes with HVAC installation, preventive maintenance, system upgrades and commercial repairs." } },
+        { "@type": "Question", name: "Are your technicians licensed?", acceptedAnswer: { "@type": "Answer", text: "Every Keller Heating And Cooling LLC technician is licensed, insured and committed to honest, dependable workmanship." } },
       ],
     },
   ],
@@ -43,8 +43,13 @@ const homePageSchema = {
 export const Route = createFileRoute("/")({
   head: () => {
     const url = `${BASE_URL}/`;
+<<<<<<< HEAD
     const title = "HVAC Contractor in Beaver Falls, PA | AC Repair & Heating Services";
     const description = "Keller Heating And Cooling LLC: Premium HVAC contractor for AC repair, heating installation, furnace service & indoor air quality. 24/7 emergency service, free estimates. Licensed & insured. Call (724) 676-8738.";
+=======
+    const title = "HVAC Contractor in Beaver Falls, PA | Keller Heating & Cooling";
+    const description = "Keller Heating & Cooling provides expert HVAC contractor services in Beaver Falls, PA. Call (724) 497-8681 for fast AC repair, heating repair, and 24/7 emergency HVAC service.";
+>>>>>>> f7d748cbfb4c0881ba151d8b75086995f1bd2906
     return {
       meta: [
         { title },
@@ -86,7 +91,7 @@ const services = [
 
 const why = [
   { icon: ShieldCheck, title: "Licensed & Insured", desc: "Fully bonded with liability and workers comp coverage." },
-  { icon: BadgeCheck, title: "Certified Technicians", desc: "NATE-certified pros with 10+ years average experience." },
+  { icon: BadgeCheck, title: "Expert Technicians", desc: "Professional and licensed pros with years of local experience." },
   { icon: Clock, title: "Same-Day Service", desc: "Book by noon and we'll be there before sundown." },
   { icon: Siren, title: "24/7 Emergency Support", desc: "Real humans answering the phone every hour of every day." },
   { icon: ThumbsUp, title: "Upfront, Fair Pricing", desc: "Flat rates approved before any work begins." },
@@ -101,9 +106,12 @@ const process = [
 ];
 
 const reviews = [
-  { name: "mazen el ali", city: "Pittsburgh, PA", text: "Zach was wonderful to work with. He responds promptly, did not try to oversell me an expensive air condition and went above and beyond to address the necessary and urgent services in timely manner. It is refreshing to work with honest people these days and Zach is one of them.", stars: 5 },
-  { name: "Doug Blackburn", city: "Allegheny County, PA", text: "Had him replace a furnace and water heater (closet install) October’22. The water heater high pressure valve was jammed against the closet wall and leaking after installation. No drain tube was attached to the valve. I sent him a text about the situation and no attempt was made to correct the problem. I had to cut a hole in the closet wall to free up the valve and also had to install a proper drain tube myself. He also left my wood flooring dirty and scratched after dragging the old unit out.  As for the furnace, upon opening the filter cover to change the filter, I discovered the furnace/ AC had been running for months with NO FILTER. also he used the old condensation drain instead of replacing. Somehow it became blocked with debris so now water is leaking from the unit. I’m replacing that myself today.", stars: 2 },
-  { name: "Dave Presto`", city: "Beaver County, PA", text: "As a Mechanical Engineer for a large international facilities management company, we source out a significant amount of work. It’s becoming rare to find Contractor’s anymore who deliver knowledge, consistency, and work ethic all in one package, but, that’s exactly what we experienced here with Zack, Skyler,  & Cody. Hardworking, dependable, and reliable from start to finish. In today’s industry, that level of commitment is very hard to come by. If you’re looking for a partner you can trust to get the job done right the first time, you’ll find it here. Reliability at its best! Keller Heating & Cooling 👍💪", stars: 5 },
+  { name: "Vincent Marcello", city: "Beaver Falls, PA", text: "I called to have my water hot tank replaced because it was leaking. The team at Keller heating and cooling had the job done in a few hours with new lines and fittings as well. There was no mess left behind and they hauled the old tank away.", stars: 5 },
+  { name: "Jimmie Lee DiIanni", city: "Beaver Falls, PA", text: "Our heat went out this week, which is always stressful during these cold days. We called Keller Heating and Cooling, and they sent someone out right away. Thankfully, the issue turned out to be a common part that needed replaced. Responsive, knowledgeable, and quick!", stars: 5 },
+  { name: "Brandi Girting", city: "Beaver Falls, PA", text: "This is the 3rd or 4th time I have used Zach and his crew over the last couple years. They are always quick to respond/arriver and get things figured out and fixed. Fair pricing and always professional.", stars: 5 },
+  { name: "Dalton Faith", city: "Beaver Falls, PA", text: "Very professional and knowledgeable crew! Zach and his team are very transparent and take the time to educate their clients on whatever system they may have. The two guys he sent out were amazing.", stars: 5 },
+  { name: "Stewart Bangs", city: "Beaver Falls, PA", text: "Will not use another heating and cooling company. Mr. Keller and his crew came out and installed my new furnace in a day, after talking to him just a few days prior. Very professional and neat.", stars: 5 },
+  { name: "Brady Young", city: "Beaver Falls, PA", text: "Zack has done several furnaces for us now. I'm always amazed how fast he can get me an estimate and the turnaround time for a start date is incredible. He has taken care of us in emergency situations and has always given a super fair price.", stars: 5 },
 ];
 
 const homeCities = LOCATIONS.slice(0, 10);
@@ -122,6 +130,9 @@ function HomePage() {
       <Hero />
       <TrustedBy />
       <Services />
+      <ACServices />
+      <HeatingServices />
+      <EmergencyService />
       <WhyChoose />
       <Process />
       <Commercial />
@@ -149,13 +160,13 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" /> 24/7 Emergency HVAC Service
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-            Reliable HVAC Services <span className="text-gradient">You Can Trust</span> in Beaver Falls, PA.
+            HVAC Contractor in Beaver Falls, PA for <span className="text-gradient">AC & Heating Service</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
             Professional heating, cooling, ventilation, repair, installation & maintenance services for homes and businesses across Greater Pittsburgh.
           </p>
           <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2 max-w-2xl text-white/90 text-sm">
-            {["Licensed Technicians","Fast Response Times","Residential & Commercial","Energy Efficient Solutions","24/7 Emergency HVAC Support"].map(f => (
+            {["Licensed Technicians", "Fast Response Times", "Residential & Commercial", "Energy Efficient Solutions", "24/7 Emergency HVAC Support"].map(f => (
               <li key={f} className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent" /> {f}</li>
             ))}
           </ul>
@@ -168,7 +179,7 @@ function Hero() {
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
-            {[["1K+","Homes Served"],["4.9★","150+ Reviews"],["24/7","Emergency"]].map(([n,l])=> (
+            {[["1K+", "Homes Served"], ["4.9★", "150+ Reviews"], ["24/7", "Emergency"]].map(([n, l]) => (
               <div key={l} className="glass-dark rounded-xl p-4 text-center">
                 <div className="text-2xl md:text-3xl font-bold font-display">{n}</div>
                 <div className="text-xs md:text-sm text-white/70 mt-1">{l}</div>
@@ -182,7 +193,7 @@ function Hero() {
 }
 
 function TrustedBy() {
-  const badges = ["NATE Certified", "BBB A+ Rated", "Carrier Factory Authorized", "Trane Comfort Specialist", "ENERGY STAR Partner", "Google 4.9★"];
+  const badges = ["Local Family Owned", "Licensed & Insured", "Upfront Flat-Rate Pricing", "24/7 Emergency Service", "Professional Technicians", "Google 4.9★"];
   return (
     <section className="py-12 border-b border-border bg-surface-soft">
       <div className="container-px mx-auto max-w-7xl">
@@ -203,7 +214,7 @@ function Services() {
   return (
     <section className="section" id="services">
       <div className="container-px mx-auto max-w-7xl">
-        <SectionHead eyebrow="Our Services" title="Complete HVAC Solutions Under One Roof" sub="From emergency repairs to full system installs, our certified technicians handle every heating, cooling and air quality need with precision." />
+        <SectionHead eyebrow="Our Services" title="Trusted HVAC Services in Beaver Falls, PA" sub="From emergency repairs to full system installs, our certified technicians handle every heating, cooling and air quality need with precision." />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map(s => (
             <Card key={s.title} className="hover-lift p-7 border-border/60 rounded-2xl">
@@ -242,7 +253,7 @@ function Commercial() {
             <Building2 className="w-3.5 h-3.5" /> Commercial HVAC Services
           </span>
           <h2 className="mt-4 text-3xl md:text-5xl font-bold text-primary leading-tight">
-            Commercial HVAC <span className="text-gradient">Built for Uptime</span>
+            Commercial HVAC Services
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
             Keep your business comfortable, code-compliant and running 24/7. From single rooftop units to multi-site preventive maintenance contracts, our commercial team delivers responsive service backed by a single point of contact.
@@ -295,7 +306,7 @@ function WhyChoose() {
   return (
     <section className="section bg-surface-soft">
       <div className="container-px mx-auto max-w-7xl">
-        <SectionHead eyebrow="Why Choose Keller Heating & Cooling" title="The Premium Standard in HVAC Service" sub="What you get with every single visit — no exceptions." />
+        <SectionHead eyebrow="Why Choose Keller Heating & Cooling" title="Why Choose Keller Heating & Cooling" sub="What you get with every single visit — no exceptions." />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {why.map(w => (
             <div key={w.title} className="glass-card rounded-2xl p-6 hover-lift">
@@ -320,11 +331,11 @@ function Process() {
         <div className="mt-14 relative grid gap-8 md:grid-cols-4">
           <div className="hidden md:block absolute top-8 left-[12%] right-[12%] h-0.5 gradient-primary opacity-30" />
           {process.map((p, i) => (
-            <div key={p.title} className="relative text-center animate-fade-up" style={{animationDelay:`${i*100}ms`}}>
+            <div key={p.title} className="relative text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
               <div className="mx-auto w-16 h-16 rounded-2xl gradient-primary text-white grid place-items-center shadow-elegant relative z-10">
                 <p.icon className="w-7 h-7" />
               </div>
-              <div className="mt-2 text-xs font-bold text-teal tracking-widest">STEP {i+1}</div>
+              <div className="mt-2 text-xs font-bold text-teal tracking-widest">STEP {i + 1}</div>
               <h3 className="mt-1 text-lg font-bold text-primary">{p.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
             </div>
@@ -344,7 +355,7 @@ function Reviews() {
           {reviews.map(r => (
             <Card key={r.name} className="p-7 rounded-2xl border-border/60 hover-lift">
               <div className="flex gap-1 text-accent">
-                {[...Array(r.stars)].map((_,i)=><Star key={i} className="w-4 h-4 fill-current" />)}
+                {[...Array(r.stars)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
               </div>
               <p className="mt-4 text-foreground/90 leading-relaxed">"{r.text}"</p>
               <div className="mt-6 pt-5 border-t border-border">
@@ -364,7 +375,7 @@ function ServiceAreas() {
     <section className="section">
       <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <SectionHead align="left" eyebrow="Service Area" title="Proudly Serving the Pittsburgh Metro" sub="Same-day service in 30+ neighborhoods across the Greater Pittsburgh area." />
+          <SectionHead align="left" eyebrow="Service Area" title="Serving Beaver Falls and Surrounding Pennsylvania Communities" sub="Same-day service in 30+ neighborhoods across the Greater Pittsburgh area." />
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2">
             {homeCities.map(c => (
               <Link key={c.slug} to="/$slug" params={{ slug: `ac-repair-${c.slug}-pa` }} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-soft hover:bg-teal/10 text-sm font-medium text-primary transition-colors">
@@ -377,17 +388,17 @@ function ServiceAreas() {
           </Button>
         </div>
         <div className="relative rounded-3xl overflow-hidden shadow-elegant aspect-[4/3]">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8002711232625!2d-80.33326!3d40.788404899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834656da46af8a1%3A0x875d20f8efee65c5!2sKeller%20Heating%20And%20Cooling%20LLC!5e0!3m2!1sen!2sus!4v1781763772775!5m2!1sen!2sus"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    className="absolute inset-0 w-full h-full"
-  />
-</div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8002711232625!2d-80.33326!3d40.788404899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834656da46af8a1%3A0x875d20f8efee65c5!2sKeller%20Heating%20And%20Cooling%20LLC!5e0!3m2!1sen!2sus!4v1781763772775!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
       </div>
     </section>
   );
@@ -437,17 +448,17 @@ function BeforeAfter() {
         <div className="mt-14 max-w-4xl mx-auto">
           <div className="relative aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-3xl shadow-elegant select-none">
             <img src={afterImg} alt="After HVAC service" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 overflow-hidden" style={{clipPath:`inset(0 ${100-pos}% 0 0)`}}>
+            <div className="absolute inset-0 overflow-hidden" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
               <img src={beforeImg} alt="Before HVAC service" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
             </div>
-            <div className="absolute top-0 bottom-0 w-1 bg-white shadow-elegant" style={{left:`${pos}%`}}>
+            <div className="absolute top-0 bottom-0 w-1 bg-white shadow-elegant" style={{ left: `${pos}%` }}>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white grid place-items-center shadow-elegant">
                 <ArrowRight className="w-4 h-4 text-primary" />
               </div>
             </div>
             <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 text-white text-xs font-semibold">BEFORE</span>
             <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-teal text-white text-xs font-semibold">AFTER</span>
-            <input type="range" min={0} max={100} value={pos} onChange={e=>setPos(+e.target.value)} className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" />
+            <input type="range" min={0} max={100} value={pos} onChange={e => setPos(+e.target.value)} className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" />
           </div>
         </div>
       </div>
@@ -481,7 +492,7 @@ function CTABanner() {
           <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-accent/30 blur-3xl" />
           <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-teal/30 blur-3xl" />
           <div className="relative">
-            <h2 className="text-3xl md:text-5xl font-bold">Need HVAC Service Today?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold">Call Keller Heating & Cooling Today</h2>
             <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">Our emergency techs are standing by 24/7. No overtime fees. No surprises.</p>
             <Button asChild variant="cta" size="xl" className="mt-8">
               <a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 676-8738 Now</a>
@@ -542,12 +553,77 @@ function InfoRow({ icon: Icon, label, value, href, target, rel }: { icon: any; l
   return href ? <a href={href} target={target} rel={rel}>{Inner}</a> : Inner;
 }
 
-export function SectionHead({ eyebrow, title, sub, align="center" }: { eyebrow: string; title: string; sub?: string; align?: "center" | "left" }) {
+export function SectionHead({ eyebrow, title, sub, align = "center" }: { eyebrow: string; title: string; sub?: string; align?: "center" | "left" }) {
   return (
     <div className={align === "center" ? "text-center max-w-3xl mx-auto" : "max-w-2xl"}>
       <span className="inline-block px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold tracking-widest uppercase">{eyebrow}</span>
       <h2 className="mt-4 text-3xl md:text-5xl font-bold text-primary">{title}</h2>
       {sub && <p className="mt-4 text-lg text-muted-foreground">{sub}</p>}
     </div>
+  );
+}
+
+
+function ACServices() {
+  const acList = [
+    { title: "AC Repair", slug: "ac-repair-beaver-falls-pa", desc: "Fast, accurate diagnostics and repairs." },
+    { title: "AC Installation", slug: "ac-installation-beaver-falls-pa", desc: "Energy-efficient central air and ductless systems." },
+    { title: "AC Replacement", slug: "ac-installation-beaver-falls-pa", desc: "Upgrade to a high-SEER system to lower bills." },
+    { title: "AC Maintenance", slug: "ac-maintenance-beaver-falls-pa", desc: "Annual tune-ups to prevent breakdowns." },
+    { title: "Emergency AC Service", slug: "emergency-hvac-beaver-falls-pa", desc: "24/7 emergency response when you need it most." }
+  ];
+  return (
+    <section className="section bg-surface-soft">
+      <div className="container-px mx-auto max-w-7xl">
+        <SectionHead eyebrow="Cooling" title="Air Conditioning Services" sub="Stay cool all summer with our comprehensive AC services." />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {acList.map(s => (
+            <Card key={s.title} className="p-6 hover-lift border-border/60">
+              <h3 className="text-lg font-bold"><Link to="/$slug" params={{ slug: s.slug }} className="text-primary hover:text-teal">{s.title}</Link></h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HeatingServices() {
+  const heatingList = [
+    { title: "Heating Repair", slug: "heating-repair-beaver-falls-pa", desc: "Fast repair for all heating systems." },
+    { title: "Furnace Repair", slug: "furnace-repair-beaver-falls-pa", desc: "Gas and electric furnace troubleshooting." },
+    { title: "Furnace Installation", slug: "furnace-installation-beaver-falls-pa", desc: "High-efficiency furnace replacements." },
+    { title: "Furnace Maintenance", slug: "furnace-maintenance-beaver-falls-pa", desc: "Keep your furnace safe and efficient." },
+    { title: "Heat Pump Repair", slug: "heat-pump-repair-beaver-falls-pa", desc: "Specialized heat pump diagnostics." },
+    { title: "Heat Pump Installation", slug: "heat-pump-installation-beaver-falls-pa", desc: "Versatile heating and cooling systems." }
+  ];
+  return (
+    <section className="section">
+      <div className="container-px mx-auto max-w-7xl">
+        <SectionHead eyebrow="Heating" title="Heating Services" sub="Reliable warmth for Beaver Falls winters." />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {heatingList.map(s => (
+            <Card key={s.title} className="p-6 hover-lift border-border/60">
+              <h3 className="text-lg font-bold"><Link to="/$slug" params={{ slug: s.slug }} className="text-primary hover:text-teal">{s.title}</Link></h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EmergencyService() {
+  return (
+    <section className="section bg-surface-soft">
+      <div className="container-px mx-auto max-w-7xl text-center">
+        <SectionHead eyebrow="24/7 Support" title="24/7 Emergency HVAC Service" sub="We are here for you any time of day or night." />
+        <Button asChild variant="cta" size="xl" className="mt-8">
+          <Link to="/$slug" params={{ slug: "emergency-hvac-beaver-falls-pa" }}>Request Emergency Service</Link>
+        </Button>
+      </div>
+    </section>
   );
 }

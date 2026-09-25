@@ -25,7 +25,7 @@ const emergencySchema = {
         "@type": "HVACBusiness",
         "@id": `${BASE_URL}/#business`,
         name: "Keller Heating And Cooling LLC",
-        telephone: "+1-724-676-8738",
+        telephone: "+1-724-497-8681",
       },
       areaServed: [
         { "@type": "City", name: "Pittsburgh" },
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/emergency")({
       </PageHero>
       <section className="section">
         <div className="container-px mx-auto max-w-5xl grid sm:grid-cols-3 gap-5">
-          {[{i:Siren,t:"Same-Hour Dispatch",d:"Most emergency calls reach you in under 60 minutes."},{i:Clock,t:"No Overtime Fees",d:"Nights, weekends, holidays — same flat rate."},{i:ShieldCheck,t:"Guaranteed Repair",d:"100% satisfaction or we return free of charge."}].map(c=> (
+          {[{ i: Siren, t: "Same-Hour Dispatch", d: "Most emergency calls reach you in under 60 minutes." }, { i: Clock, t: "No Overtime Fees", d: "Nights, weekends, holidays — same flat rate." }, { i: ShieldCheck, t: "Guaranteed Repair", d: "100% satisfaction or we return free of charge." }].map(c => (
             <div key={c.t} className="glass-card rounded-2xl p-6 text-center hover-lift">
               <c.i className="w-7 h-7 mx-auto text-teal" />
               <h2 className="mt-4 font-bold text-primary">{c.t}</h2>

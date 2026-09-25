@@ -11,7 +11,7 @@ const aboutSchema = {
       "@type": "AboutPage",
       "@id": `${BASE_URL}/about/#webpage`,
       name: "About Keller Heating And Cooling LLC",
-      description: "Family-owned HVAC contractor serving Pittsburgh since 2008. NATE-certified technicians, 150+ five-star reviews, and a commitment to honest, dependable service.",
+      description: "Family-owned HVAC contractor serving Pittsburgh since 2008. Expert technicians, verified five-star reviews, and a commitment to honest, dependable service.",
       url: `${BASE_URL}/about/`,
       isPartOf: { "@id": `${BASE_URL}/#website` },
     },
@@ -23,7 +23,7 @@ const aboutSchema = {
       numberOfEmployees: "28",
       slogan: "Comfort, Honesty, Craft.",
       description: "Family-owned HVAC contractor providing premium heating, cooling, and indoor air quality services to Pittsburgh and surrounding areas.",
-      award: "BBB A+ Rating, Google 4.9 Stars, NATE Certified",
+      award: "Google 4.9 Stars, Licensed & Insured",
     },
   ],
 };
@@ -32,12 +32,12 @@ export const Route = createFileRoute("/about")({
   head: () => {
     const url = `${BASE_URL}/about/`;
     const title = "About Us | Family-Owned HVAC Contractor Since 2008 | Keller Heating";
-    const description = "Meet the NATE-certified team behind Pittsburgh's most trusted HVAC contractor. 15+ years serving Pennsylvania with honest, dependable heating and cooling services. 4.9★ rated.";
+    const description = "Meet the Expert team behind Pittsburgh's most trusted HVAC contractor. Years serving Pennsylvania with honest, dependable heating and cooling services. 4.9★ rated.";
     return {
       meta: [
         { title },
         { name: "description", content: description },
-        { name: "keywords", content: "HVAC company Pittsburgh, heating cooling contractor, family owned HVAC, NATE certified, about Keller Heating" },
+        { name: "keywords", content: "HVAC company Pittsburgh, heating cooling contractor, family owned HVAC, Licensed, about Keller Heating" },
         { name: "robots", content: "index, follow" },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
@@ -54,7 +54,7 @@ export const Route = createFileRoute("/about")({
   },
   component: () => (
     <>
-      <PageHero eyebrow="Our Story" title="Family-owned. Customer-obsessed. NATE-certified." sub="Since 2008, Keller Heating & Cooling has delivered premium HVAC service to over 1,000 Pennsylvania homes and businesses." />
+      <PageHero eyebrow="Our Story" title="Family-owned. Customer-obsessed. Expert." sub="Since 2008, Keller Heating & Cooling has delivered premium HVAC service to Pennsylvania homes and businesses." />
       <section className="section">
         <div className="container-px mx-auto max-w-5xl grid md:grid-cols-2 gap-12">
           <div>

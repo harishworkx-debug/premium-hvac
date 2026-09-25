@@ -23,7 +23,7 @@ export const Route = createFileRoute("/services")({
   head: () => {
     const url = `${BASE_URL}/services/`;
     const title = "HVAC Services | AC Repair, Heating, Furnace & Air Quality | Keller Heating";
-    const description = "Complete HVAC services in Pittsburgh: AC installation & repair, heating systems, furnace service, duct cleaning, indoor air quality, and 24/7 emergency service. NATE-certified technicians.";
+    const description = "Complete HVAC services in Pittsburgh: AC installation & repair, heating systems, furnace service, duct cleaning, indoor air quality, and 24/7 emergency service. Expert technicians.";
     return {
       meta: [
         { title },
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/services")({
   },
   component: () => (
     <>
-      <PageHero eyebrow="Services" title="Complete HVAC Solutions, Done Right." sub="Every service backed by NATE-certified technicians, flat-rate pricing, and a 100% satisfaction guarantee." />
+      <PageHero eyebrow="Services" title="Complete HVAC Solutions, Done Right." sub="Every service backed by Expert technicians, flat-rate pricing, and a 100% satisfaction guarantee." />
       <section className="section">
         <div className="container-px mx-auto max-w-7xl">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

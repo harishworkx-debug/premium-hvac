@@ -27,7 +27,7 @@ const businessStructuredData = {
       alternateName: "Keller Heating & Cooling",
       description: "Premium HVAC contractor offering AC repair, heating installation, furnace service, and indoor air quality solutions. Serving Pittsburgh and surrounding areas with 24/7 emergency service.",
       url: BASE_URL,
-      telephone: "+1-724-676-8738",
+      telephone: "+1-724-497-8681",
       email: "info@kellerheatingandcooling.com",
       faxNumber: "+1-724-XXX-XXXX",
       image: `${BASE_URL}/og-image.png`,
@@ -111,7 +111,7 @@ const businessStructuredData = {
       logo: `${BASE_URL}/logo.png`,
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+1-724-676-8738",
+        telephone: "+1-724-497-8681",
         contactType: "customer service",
         availableLanguage: ["English"],
         areaServed: "US",

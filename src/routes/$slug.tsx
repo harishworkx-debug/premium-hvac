@@ -4,6 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CircleCheck as CheckCircle2, Phone, ArrowRight, MapPin, Star, ShieldCheck, Clock } from "lucide-react";
 import { parseSlug, SERVICES, LOCATIONS, PRIMARY_LOCATION } from "@/data/seo-pages";
+import { AcRepairPage } from "@/components/AcRepairPage";
+import { FurnaceRepairPage } from "@/components/FurnaceRepairPage";
+import { HeatingRepairPage } from "@/components/HeatingRepairPage";
+import { EmergencyHvacPage } from "@/components/EmergencyHvacPage";
+import { HotWaterTankPage } from "@/components/HotWaterTankPage";
 
 const BASE_URL = "https://www.kellerheatingandcooling.com";
 
@@ -11,7 +16,7 @@ export const Route = createFileRoute("/$slug")({
   loader: ({ params }) => {
     const data = parseSlug(params.slug);
     if (!data) throw notFound();
-    
+
     // Remove the icon (React component) so it can be serialized by Seroval safely
     const { icon, ...serviceWithoutIcon } = data.service;
     return {
@@ -32,7 +37,11 @@ export const Route = createFileRoute("/$slug")({
     if (loaderData.kind === "service") {
       const { service, location } = loaderData;
       title = `${service.name} in ${location.name}, PA | 24/7 HVAC Contractor`;
+<<<<<<< HEAD
       description = `Trusted ${service.name.toLowerCase()} experts in ${location.name}, PA. NATE-certified technicians, same-day service, flat-rate pricing. Licensed & insured. Call (724) 676-8738.`;
+=======
+      description = `Trusted ${service.name.toLowerCase()} experts in ${location.name}, PA. Expert technicians, same-day service, flat-rate pricing. Licensed & insured. Call (724) 497-8681.`;
+>>>>>>> f7d748cbfb4c0881ba151d8b75086995f1bd2906
       keywords = `${service.name.toLowerCase()} ${location.name} PA, HVAC contractor ${location.name}, ${service.name.toLowerCase()} near me, heating cooling ${location.name}`;
 
       structuredData = {
@@ -45,7 +54,7 @@ export const Route = createFileRoute("/$slug")({
           "@type": "HVACBusiness",
           "@id": `${BASE_URL}/#business`,
           name: "Keller Heating And Cooling LLC",
-          telephone: "+1-724-676-8738",
+          telephone: "+1-724-497-8681",
           address: {
             "@type": "PostalAddress",
             addressLocality: location.name,
@@ -92,7 +101,7 @@ export const Route = createFileRoute("/$slug")({
         name: `Keller Heating And Cooling LLC - ${location.name}`,
         description: `Professional HVAC services including AC repair, heating installation, and furnace service in ${location.name}, PA.`,
         url: url,
-        telephone: "+1-724-676-8738",
+        telephone: "+1-724-497-8681",
         email: "info@kellerheatingandcooling.com",
         address: {
           "@type": "PostalAddress",
@@ -158,12 +167,20 @@ export const Route = createFileRoute("/$slug")({
 
 function SeoPage() {
   const data = Route.useLoaderData();
-  return data.kind === "service" ? <ServicePage data={data} /> : <LocationPage data={data} />;
+  if (data.kind === "service") {
+    if (data.service.slug === "ac-repair") return <AcRepairPage data={data} />;
+    if (data.service.slug === "furnace-repair") return <FurnaceRepairPage data={data} />;
+    if (data.service.slug === "heating-repair") return <HeatingRepairPage data={data} />;
+    if (data.service.slug === "emergency-hvac") return <EmergencyHvacPage data={data} />;
+    if (data.service.slug === "hot-water-tank-replacement") return <HotWaterTankPage data={data} />;
+    return <ServicePage data={data} />;
+  }
+  return <LocationPage data={data} />;
 }
 
 function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { kind: "service" }> }) {
   const { service, location } = data!;
-  const related = SERVICES.filter(s => s.slug !== service.slug && (s.category === service.category || ["AC","Heating","Furnace"].includes(s.category))).slice(0, 6);
+  const related = SERVICES.filter(s => s.slug !== service.slug && (s.category === service.category || ["AC", "Heating", "Furnace"].includes(s.category))).slice(0, 6);
   return (
     <>
       <PageHero
@@ -182,7 +199,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
           <div className="lg:col-span-2 prose-content">
             <h2 className="text-3xl font-bold text-primary">Professional {service.name} for {location.name}, {location.state}</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Keller Heating And Cooling LLC delivers premium {service.name.toLowerCase()} to homeowners and businesses throughout {location.name} and the surrounding Beaver County area. Every job is backed by our 100% satisfaction guarantee, upfront flat-rate pricing, and a team of NATE-certified technicians who treat your home like their own.
+              Keller Heating And Cooling LLC delivers premium {service.name.toLowerCase()} to homeowners and businesses throughout {location.name} and the surrounding Beaver County area. Every job is backed by our 100% satisfaction guarantee, upfront flat-rate pricing, and a team of Expert technicians who treat your home like their own.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               {location.blurb} Whether you need routine service, a same-day repair, or a complete new installation, we'll show up on time, explain every option clearly, and never pressure you into work you don't need.
@@ -238,7 +255,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
 
 function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { kind: "location" }> }) {
   const { location } = data!;
-  const featured = ["ac-repair","ac-installation","heating-repair","furnace-repair","heat-pump-installation","duct-cleaning"];
+  const featured = ["ac-repair", "ac-installation", "heating-repair", "furnace-repair", "heat-pump-installation", "duct-cleaning"];
   const featuredServices = featured.map(s => SERVICES.find(x => x.slug === s)!).filter(Boolean);
   return (
     <>
