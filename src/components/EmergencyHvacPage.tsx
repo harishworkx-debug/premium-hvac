@@ -12,7 +12,7 @@ export function EmergencyHvacPage({ data }: { data: any }) {
         sub="Fast, responsive emergency HVAC repair when you need it most. Our team is standing by to handle critical heating and cooling failures."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="xl" className="bg-red-600 hover:bg-red-700 text-white font-bold animate-pulse"><a href="tel:+17246768738"><Phone className="w-6 h-6 mr-2" /> CALL NOW: (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="xl" className="bg-red-600 hover:bg-red-700 text-white font-bold animate-pulse"><a href="tel:+17246768738"><Phone className="w-6 h-6 mr-2" /> CALL NOW: (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
@@ -22,14 +22,14 @@ export function EmergencyHvacPage({ data }: { data: any }) {
           <h2 className="text-4xl font-bold text-primary">HVAC Emergency Service Beaver Falls</h2>
           <p className="text-xl text-muted-foreground">Don't wait for business hours. If your HVAC system has failed completely, is leaking heavily, or poses a safety risk, call us immediately.</p>
           <div className="py-6">
-            <Button asChild variant="cta" size="xl" className="text-2xl py-8 px-12 rounded-full shadow-xl"><a href="tel:+17246768738"><Phone className="w-8 h-8 mr-3" /> (724) 676-8738</a></Button>
+            <Button asChild variant="cta" size="xl" className="text-2xl py-8 px-12 rounded-full shadow-xl"><a href="tel:+17246768738"><Phone className="w-8 h-8 mr-3" /> (724) 497-8681</a></Button>
           </div>
         </div>
       </section>
 
       <section className="section">
         <div className="container-px mx-auto max-w-4xl prose-content space-y-12">
-          
+
           <div>
             <h2 className="text-3xl font-bold text-primary">24 Hour HVAC Beaver Falls Response</h2>
             <p className="mt-4 text-muted-foreground">Equipment failures happen at the worst times. Whether it's a freezing weekend or a sweltering holiday, our emergency HVAC repair Beaver Falls team is ready. We dispatch fully-stocked trucks to diagnose and resolve your HVAC issues promptly.</p>
@@ -51,7 +51,7 @@ export function EmergencyHvacPage({ data }: { data: any }) {
             <ul className="mt-4 space-y-4 text-muted-foreground">
               <li><strong>1. Turn off the system:</strong> If you smell gas, suspect an electrical fire, or see heavy water leaking, turn off the system at the breaker or gas valve immediately.</li>
               <li><strong>2. Evacuate if necessary:</strong> If you suspect carbon monoxide or a gas leak, leave the house and call the gas company or 911.</li>
-              <li><strong>3. Call Keller Heating & Cooling:</strong> Dial (724) 676-8738 for our emergency dispatch. Describe the issue so we can prioritize your call.</li>
+              <li><strong>3. Call Keller Heating & Cooling:</strong> Dial (724) 497-8681 for our emergency dispatch. Describe the issue so we can prioritize your call.</li>
             </ul>
           </div>
 
@@ -59,7 +59,7 @@ export function EmergencyHvacPage({ data }: { data: any }) {
             <h2 className="text-3xl font-bold text-red-700 flex items-center justify-center gap-3"><Clock className="w-8 h-8" /> Need Help Now?</h2>
             <p className="mt-3 text-red-900/80 text-lg">Our technicians are available for rapid dispatch.</p>
             <div className="mt-6">
-              <Button asChild variant="destructive" size="xl" className="shadow-lg"><a href="tel:+17246768738">Call (724) 676-8738</a></Button>
+              <Button asChild variant="destructive" size="xl" className="shadow-lg"><a href="tel:+17246768738">Call (724) 497-8681</a></Button>
             </div>
           </div>
 

@@ -12,16 +12,16 @@ export function AcRepairPage({ data }: { data: any }) {
       <PageHero
         eyebrow="AC Repair in Beaver Falls, PA"
         title="AC Repair in Beaver Falls, PA"
-        sub="Fast, reliable AC repair for Beaver Falls homes. Our NATE-certified techs diagnose accurately, quote upfront, and get your home cool again — fast."
+        sub="Fast, reliable AC repair for Beaver Falls homes. Our Expert techs diagnose accurately, quote upfront, and get your home cool again — fast."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
       <section className="section">
         <div className="container-px mx-auto max-w-4xl prose-content space-y-12">
-          
+
           <div>
             <h2 className="text-3xl font-bold text-primary">Fast AC Repair for Beaver Falls Homes</h2>
             <p className="mt-4 text-muted-foreground">When your central air or ductless mini-split stops working during a hot Pennsylvania summer, you need an HVAC technician who can fix it the same day. At Keller Heating & Cooling, we specialize in residential AC repair Beaver Falls families can count on. We service all major brands, providing upfront pricing and guaranteed workmanship.</p>
@@ -78,14 +78,14 @@ export function AcRepairPage({ data }: { data: any }) {
 
           <div>
             <h2 className="text-3xl font-bold text-primary">Serving Beaver Falls and Nearby Areas</h2>
-            <p className="mt-4 text-muted-foreground">We provide AC repair near Beaver Falls, including Patterson Heights, College Hill, and surrounding Beaver County communities.</p>
+            <p className="mt-4 text-muted-foreground">If you are searching for 'AC repair near me' or need fast AC repair near Beaver Falls, we provide service, including Patterson Heights, College Hill, and surrounding Beaver County communities.</p>
           </div>
 
           <div className="rounded-3xl gradient-hero text-white p-8 md:p-10 text-center shadow-elegant">
             <h2 className="text-3xl font-bold">Schedule AC Repair</h2>
             <p className="mt-3 text-white/80">Get your cooling system back online today.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Service</Link></Button>
             </div>
           </div>

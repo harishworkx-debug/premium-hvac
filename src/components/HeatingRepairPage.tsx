@@ -12,13 +12,13 @@ export function HeatingRepairPage({ data }: { data: any }) {
         sub="Fast, reliable heating repair when you need warmth most. We service every brand of furnace, boiler, and heat pump with same-day appointments."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
       <section className="section">
         <div className="container-px mx-auto max-w-4xl prose-content space-y-12">
-          
+
           <div>
             <h2 className="text-3xl font-bold text-primary">Comprehensive Heating System Repair Beaver Falls</h2>
             <p className="mt-4 text-muted-foreground">Pennsylvania winters demand a reliable heating system. When yours falters, Keller Heating & Cooling is here to help with expert heating repair Beaver Falls PA residents can trust. As a premier heating contractor Beaver Falls PA, we repair all types of heating equipment, ensuring your home or business stays comfortable year-round.</p>
@@ -41,14 +41,14 @@ export function HeatingRepairPage({ data }: { data: any }) {
 
           <div>
             <h2 className="text-3xl font-bold text-primary">Why Choose Keller as Your Heating Contractor?</h2>
-            <p className="mt-4 text-muted-foreground">We pride ourselves on transparent pricing, NATE-certified technicians, and a commitment to customer satisfaction. We don't just patch up problems; we identify the root cause of your heating system issues to provide lasting repairs and prevent future breakdowns.</p>
+            <p className="mt-4 text-muted-foreground">We pride ourselves on transparent pricing, Expert technicians, and a commitment to customer satisfaction. We don't just patch up problems; we identify the root cause of your heating system issues to provide lasting repairs and prevent future breakdowns.</p>
           </div>
 
           <div className="rounded-3xl gradient-hero text-white p-8 md:p-10 text-center shadow-elegant">
             <h2 className="text-3xl font-bold">Need Heating Service?</h2>
             <p className="mt-3 text-white/80">Contact Beaver Falls' trusted heating experts today.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Service</Link></Button>
             </div>
           </div>

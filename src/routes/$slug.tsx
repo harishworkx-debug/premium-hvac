@@ -8,6 +8,7 @@ import { AcRepairPage } from "@/components/AcRepairPage";
 import { FurnaceRepairPage } from "@/components/FurnaceRepairPage";
 import { HeatingRepairPage } from "@/components/HeatingRepairPage";
 import { EmergencyHvacPage } from "@/components/EmergencyHvacPage";
+import { HotWaterTankPage } from "@/components/HotWaterTankPage";
 
 const BASE_URL = "https://www.kellerheatingandcooling.com";
 
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/$slug")({
   loader: ({ params }) => {
     const data = parseSlug(params.slug);
     if (!data) throw notFound();
-    
+
     // Remove the icon (React component) so it can be serialized by Seroval safely
     const { icon, ...serviceWithoutIcon } = data.service;
     return {
@@ -36,7 +37,7 @@ export const Route = createFileRoute("/$slug")({
     if (loaderData.kind === "service") {
       const { service, location } = loaderData;
       title = `${service.name} in ${location.name}, PA | 24/7 HVAC Contractor`;
-      description = `Trusted ${service.name.toLowerCase()} experts in ${location.name}, PA. NATE-certified technicians, same-day service, flat-rate pricing. Licensed & insured. Call (724) 676-8738.`;
+      description = `Trusted ${service.name.toLowerCase()} experts in ${location.name}, PA. Expert technicians, same-day service, flat-rate pricing. Licensed & insured. Call (724) 497-8681.`;
       keywords = `${service.name.toLowerCase()} ${location.name} PA, HVAC contractor ${location.name}, ${service.name.toLowerCase()} near me, heating cooling ${location.name}`;
 
       structuredData = {
@@ -86,7 +87,7 @@ export const Route = createFileRoute("/$slug")({
     } else {
       const { location } = loaderData;
       title = `AC Repair & HVAC Services in ${location.name}, PA | Keller Heating`;
-      description = `24/7 AC repair, heating installation & HVAC services in ${location.name}, PA. Same-day service, 4.9★ rated, licensed & insured. Free estimates. Call (724) 676-8738.`;
+      description = `24/7 AC repair, heating installation & HVAC services in ${location.name}, PA. Same-day service, 4.9★ rated, licensed & insured. Free estimates. Call (724) 497-8681.`;
       keywords = `AC repair ${location.name} PA, HVAC ${location.name}, air conditioning repair, heating repair, furnace service ${location.name}`;
 
       structuredData = {
@@ -167,6 +168,7 @@ function SeoPage() {
     if (data.service.slug === "furnace-repair") return <FurnaceRepairPage data={data} />;
     if (data.service.slug === "heating-repair") return <HeatingRepairPage data={data} />;
     if (data.service.slug === "emergency-hvac") return <EmergencyHvacPage data={data} />;
+    if (data.service.slug === "hot-water-tank-replacement") return <HotWaterTankPage data={data} />;
     return <ServicePage data={data} />;
   }
   return <LocationPage data={data} />;
@@ -174,7 +176,7 @@ function SeoPage() {
 
 function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { kind: "service" }> }) {
   const { service, location } = data!;
-  const related = SERVICES.filter(s => s.slug !== service.slug && (s.category === service.category || ["AC","Heating","Furnace"].includes(s.category))).slice(0, 6);
+  const related = SERVICES.filter(s => s.slug !== service.slug && (s.category === service.category || ["AC", "Heating", "Furnace"].includes(s.category))).slice(0, 6);
   return (
     <>
       <PageHero
@@ -183,7 +185,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
         sub={service.intro}
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
           <Button asChild variant="hero" size="lg"><Link to="/contact">Get a Free Estimate <ArrowRight className="w-5 h-5" /></Link></Button>
         </div>
       </PageHero>
@@ -193,7 +195,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
           <div className="lg:col-span-2 prose-content">
             <h2 className="text-3xl font-bold text-primary">Professional {service.name} for {location.name}, {location.state}</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Keller Heating And Cooling LLC delivers premium {service.name.toLowerCase()} to homeowners and businesses throughout {location.name} and the surrounding Beaver County area. Every job is backed by our 100% satisfaction guarantee, upfront flat-rate pricing, and a team of NATE-certified technicians who treat your home like their own.
+              Keller Heating And Cooling LLC delivers premium {service.name.toLowerCase()} to homeowners and businesses throughout {location.name} and the surrounding Beaver County area. Every job is backed by our 100% satisfaction guarantee, upfront flat-rate pricing, and a team of Expert technicians who treat your home like their own.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               {location.blurb} Whether you need routine service, a same-day repair, or a complete new installation, we'll show up on time, explain every option clearly, and never pressure you into work you don't need.
@@ -210,7 +212,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
               <h3 className="text-2xl md:text-3xl font-bold">Ready for {service.name} in {location.name}?</h3>
               <p className="mt-3 text-white/80">Same-day appointments available. Call now or request a free written estimate.</p>
               <div className="mt-6 flex flex-wrap gap-3 justify-center">
-                <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+                <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
                 <Button asChild variant="hero" size="xl"><Link to="/contact">Book Online</Link></Button>
               </div>
             </div>
@@ -249,7 +251,7 @@ function ServicePage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { k
 
 function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { kind: "location" }> }) {
   const { location } = data!;
-  const featured = ["ac-repair","ac-installation","heating-repair","furnace-repair","heat-pump-installation","duct-cleaning"];
+  const featured = ["ac-repair", "ac-installation", "heating-repair", "furnace-repair", "heat-pump-installation", "duct-cleaning"];
   const featuredServices = featured.map(s => SERVICES.find(x => x.slug === s)!).filter(Boolean);
   return (
     <>
@@ -259,7 +261,7 @@ function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { 
         sub={`Local, licensed and insured HVAC contractor serving ${location.name} and surrounding neighborhoods with same-day service.`}
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
           <Button asChild variant="hero" size="lg"><Link to="/contact">Get a Free Estimate <ArrowRight className="w-5 h-5" /></Link></Button>
         </div>
       </PageHero>
@@ -307,7 +309,7 @@ function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { 
               <h3 className="text-2xl md:text-3xl font-bold">Need HVAC Service in {location.name} Today?</h3>
               <p className="mt-3 text-white/80">Call now for fast, reliable heating and cooling solutions.</p>
               <div className="mt-6 flex flex-wrap gap-3 justify-center">
-                <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+                <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
                 <Button asChild variant="hero" size="xl"><Link to="/contact">Book Online</Link></Button>
               </div>
             </div>

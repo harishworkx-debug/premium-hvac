@@ -6,56 +6,22 @@ import { Star } from "lucide-react";
 const BASE_URL = "https://www.kellerheatingandcooling.com";
 
 const reviews = [
-  {
-    n: "Jimmie Lee DiIanni",
-    c: "Beaver Falls, PA",
-    t: "Our heat went out during a cold spell and Keller Heating & Cooling responded immediately. The issue was diagnosed and repaired quickly. Excellent service."
-  },
-  {
-    n: "Dave Presto",
-    c: "Pennsylvania",
-    t: "As a Mechanical Engineer, I appreciate contractors who deliver knowledge, consistency, and strong work ethic. Keller Heating & Cooling exceeded expectations."
-  },
-  {
-    n: "Brandi Girting",
-    c: "Beaver County, PA",
-    t: "I've used Zach and his crew several times. They are always quick to respond, professional, knowledgeable, and fairly priced."
-  },
-  {
-    n: "Stewart Bangs",
-    c: "Beaver Falls, PA",
-    t: "Keller Heating & Cooling installed my new furnace within days of my call. Professional, efficient, and very neat work."
-  },
-  {
-    n: "Mazen El Ali",
-    c: "Pennsylvania",
-    t: "Zach was honest, responsive, and never tried to oversell. He handled urgent HVAC service quickly and professionally."
-  },
-  {
-    n: "Dalton Faith",
-    c: "Pennsylvania",
-    t: "Very professional and knowledgeable crew. They took time to explain everything and were transparent throughout the process."
-  },
-  {
-    n: "Mackenzie Fajtak",
-    c: "Beaver County, PA",
-    t: "When our heat stopped working, Keller Heating & Cooling arrived promptly, fixed the issue, and charged a fair price."
-  },
-  {
-    n: "Brady Young",
-    c: "Pennsylvania",
-    t: "Fast estimates, quick scheduling, fair pricing, and dependable emergency service. Highly recommended."
-  },
-  {
-    n: "Vindy F",
-    c: "Beaver Falls, PA",
-    t: "Zach fit my mother into a busy schedule, arrived in the evening, and fixed her heater issue. Professional and reasonably priced."
-  },
-  {
-    n: "Vincent Marcello",
-    c: "Beaver County, PA",
-    t: "Water heater replacement was completed within hours. Clean installation, new fittings, and no mess left behind."
-  }
+  { n: "Vincent Marcello", c: "Beaver Falls", t: "I called to have my water hot tank replaced because it was leaking. The team at Keller heating and cooling had the job done in a few hours with new lines and fittings as well. There was no mess left behind and they hauled the old tank away." },
+  { n: "Jimmie Lee DiIanni", c: "Beaver Falls", t: "Our heat went out this week, which is always stressful during these cold days. We called Keller Heating and Cooling, and they sent someone out right away. Thankfully, the issue turned out to be a common part that needed replaced. Responsive, knowledgeable, and quick!" },
+  { n: "Brandi Girting", c: "Beaver Falls", t: "This is the 3rd or 4th time I have used Zach and his crew over the last couple years. They are always quick to respond/arriver and get things figured out and fixed. Fair pricing and always professional." },
+  { n: "Dave Presto", c: "Beaver County", t: "As a Mechanical Engineer for a large international facilities management company, we source out a significant amount of work. It’s becoming rare to find Contractor’s anymore who deliver knowledge, consistency, and work ethic all in one package, but, that’s exactly what we experienced here." },
+  { n: "Dalton Faith", c: "Beaver Falls", t: "Very professional and knowledgeable crew! Zach and his team are very transparent and take the time to educate their clients on whatever system they may have. The two guys he sent out were amazing." },
+  { n: "mazen el ali", c: "Beaver Falls", t: "Zach was wonderful to work with. He responds promptly, did not try to oversell me an expensive air condition and went above and beyond to address the necessary and urgent services in timely manner." },
+  { n: "Stewart Bangs", c: "Beaver Falls", t: "Will not use another heating and cooling company. Mr. Keller and his crew came out and installed my new furnace in a day, after talking to him just a few days prior. Very professional and neat." },
+  { n: "Brady Young", c: "Beaver Falls", t: "Zack has done several furnaces for us now. I'm always amazed how fast he can get me an estimate and the turnaround time for a start date is incredible. He has taken care of us in emergency situations and has always given a super fair price." },
+  { n: "Vindy F", c: "Beaver Falls", t: "Mom had a heater issue. Called Zach Keller and he found a way to fair her into his busy schedule today. Showed up at 7PM and fixed the issue. Professional and fair pricing. Highly recommend!" },
+  { n: "Mackenzie Fajtak", c: "Beaver Falls", t: "Our heat stopped working in the evening so we called Keller Heating and Cooling. They came in a timely manor, figured out what was wrong and fixed it for a great price." },
+  { n: "Brittany B.", c: "Beaver Falls", t: "Seriously the best heating and cooling company, they installed my new water heater within hours and left it spotless." },
+  { n: "Chip Fortune", c: "Beaver Falls", t: "Thee best Heating and Cooling, very prompt, you won’t find a better price, Kelley’s has put in Furnance new air conditioning and a water tank." },
+  { n: "Brandon Graham", c: "Beaver Falls", t: "Professional and fair pricing" },
+  { n: "Ben Oaks", c: "Beaver Falls", t: "very courteous employees" },
+  { n: "Kelsey Miles", c: "Beaver Falls", t: "Very helpful, professional, and friendly!!" },
+  { n: "John Bravo", c: "Beaver Falls", t: "Very professional." }
 ];
 
 const reviewsSchema = {

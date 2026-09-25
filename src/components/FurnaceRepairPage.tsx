@@ -15,13 +15,13 @@ export function FurnaceRepairPage({ data }: { data: any }) {
         sub="Fast furnace repair when temperatures drop. Our techs carry the most common parts on every truck, so most repairs happen on the first visit."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
       <section className="section">
         <div className="container-px mx-auto max-w-4xl prose-content space-y-12">
-          
+
           <div>
             <h2 className="text-3xl font-bold text-primary">Dependable Furnace Service in Beaver Falls</h2>
             <p className="mt-4 text-muted-foreground">A cold winter night in Pennsylvania is no time for your furnace to quit. At Keller Heating & Cooling, we provide reliable residential furnace repair to keep your family warm and safe. Whether you have a modern gas furnace or an older system, our skilled furnace technician Beaver Falls team can accurately diagnose and repair the issue.</p>
@@ -39,7 +39,7 @@ export function FurnaceRepairPage({ data }: { data: any }) {
 
           <div>
             <h2 className="text-3xl font-bold text-primary">Emergency Furnace Repair</h2>
-            <p className="mt-4 text-muted-foreground">We know that a broken furnace in the middle of winter is a true emergency. We offer emergency furnace repair to ensure your home doesn't reach freezing temperatures. Our rapid response times and well-stocked trucks mean we can often fix the problem on the spot.</p>
+            <p className="mt-4 text-muted-foreground">We know that a broken furnace in the middle of winter is a true emergency. For homeowners looking for 'furnace repair near me', we offer emergency furnace repair to ensure your home doesn't reach freezing temperatures. Our rapid response times and well-stocked trucks mean we can often fix the problem on the spot.</p>
           </div>
 
           <div>
@@ -70,7 +70,7 @@ export function FurnaceRepairPage({ data }: { data: any }) {
             <h2 className="text-3xl font-bold">Schedule Your Furnace Repair Today</h2>
             <p className="mt-3 text-white/80">Don't suffer in the cold. Contact our Beaver Falls heating experts now.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Service</Link></Button>
             </div>
           </div>

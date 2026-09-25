@@ -3,7 +3,7 @@ import { Snowflake, Wrench, Flame, HardHat, Wind, Sparkles, Building2, Siren, Th
 export type ServiceSpec = {
   slug: string; // e.g. "ac-repair"
   name: string; // e.g. "AC Repair"
-  category: "AC" | "Heating" | "Furnace" | "Heat Pump" | "Air Quality" | "Commercial" | "Emergency";
+  category: "AC" | "Heating" | "Furnace" | "Heat Pump" | "Air Quality" | "Commercial" | "Emergency" | "Water Heater";
   type: "Installation" | "Repair" | "Maintenance" | "Service";
   icon: LucideIcon;
   intro: string;
@@ -11,11 +11,14 @@ export type ServiceSpec = {
 };
 
 export const SERVICES: ServiceSpec[] = [
+  { slug: "hot-water-tank-replacement", name: "Hot Water Tank Replacement", category: "Water Heater", type: "Installation", icon: Wrench,
+    intro: "Professional hot water tank and water heater replacement. Fast, code-compliant installations for both traditional and tankless systems.",
+    features: ["Gas & Electric Water Heaters","Tankless Water Heater Installation","Old Unit Haul-Away","Same-Day Replacement","Leak Repair & Diagnostics","Upfront Flat-Rate Pricing"] },
   { slug: "ac-installation", name: "AC Installation", category: "AC", type: "Installation", icon: Snowflake,
     intro: "Energy-efficient central air, ductless mini-split and heat-pump installations sized for your home. Every install comes with a 10-year parts & labor warranty and a satisfaction guarantee.",
     features: ["Right-sized Manual J load calculations","Carrier, Trane, Lennox & Goodman dealer","High-SEER inverter systems","Smart thermostat included","Old unit haul-away","10-year parts & labor warranty"] },
   { slug: "ac-repair", name: "AC Repair", category: "AC", type: "Repair", icon: Wrench,
-    intro: "Same-day air conditioner repair for every major brand. Our NATE-certified techs diagnose accurately, quote upfront, and get your home cool again — fast.",
+    intro: "Same-day air conditioner repair for every major brand. Our Expert techs diagnose accurately, quote upfront, and get your home cool again — fast.",
     features: ["Same-day diagnostics","All brands & models","Refrigerant leak detection","Capacitor & compressor repair","Upfront flat-rate pricing","24/7 emergency repair"] },
   { slug: "ac-maintenance", name: "AC Maintenance", category: "AC", type: "Maintenance", icon: Sparkles,
     intro: "Annual AC tune-ups that extend system life, lower energy bills, and prevent summer breakdowns. Includes 21-point inspection and priority dispatch.",
@@ -81,7 +84,7 @@ export const LOCATIONS: LocationSpec[] = [
   { slug: "ross-township", name: "Ross Township", blurb: "Ross Township homeowners count on us for AC repair, furnace service and indoor air quality solutions. Local techs, honest quotes, and zero pressure to upsell." },
   { slug: "shaler", name: "Shaler", blurb: "Trusted HVAC service throughout Shaler Township. From Glenshaw to Etna, we deliver the same prompt, professional experience our 150+ five-star reviews are built on." },
   { slug: "penn-hills", name: "Penn Hills", blurb: "Penn Hills' mix of mid-century ranches and newer builds means every HVAC job is different — and we love that. Same-day repair, expert installations, and friendly service every time." },
-  { slug: "plum", name: "Plum", blurb: "Heating and air conditioning service for Plum Borough homeowners. We service every major brand, with NATE-certified technicians and upfront flat-rate pricing." },
+  { slug: "plum", name: "Plum", blurb: "Heating and air conditioning service for Plum Borough homeowners. We service every major brand, with Expert technicians and upfront flat-rate pricing." },
   { slug: "upper-st-clair", name: "Upper St. Clair", blurb: "Upper St. Clair's premier choice for HVAC. We specialize in high-efficiency installations and white-glove service for the South Hills' finest homes." },
   { slug: "robinson", name: "Robinson", blurb: "Robinson Township residents and businesses rely on Keller Heating And Cooling LLC for prompt, courteous HVAC service — from rooftop units to residential furnaces." },
   { slug: "south-hills", name: "South Hills", blurb: "Comprehensive HVAC service across the South Hills — Mt. Lebanon, Bethel Park, Upper St. Clair, Castle Shannon and Brentwood. One trusted local team for every home." },

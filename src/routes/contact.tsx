@@ -38,7 +38,7 @@ export const Route = createFileRoute("/contact")({
   head: () => {
     const url = `${BASE_URL}/contact/`;
     const title = "Contact Us | Free HVAC Estimate - 24/7 Service | Keller Heating & Cooling";
-    const description = "Get a free HVAC estimate or call 24/7 for emergency AC, heating, or furnace service. Keller Heating And Cooling LLC serves Pittsburgh, Beaver Falls & surrounding areas. Call (724) 676-8738.";
+    const description = "Get a free HVAC estimate or call 24/7 for emergency AC, heating, or furnace service. Keller Heating And Cooling LLC serves Pittsburgh, Beaver Falls & surrounding areas. Call (724) 497-8681.";
     return {
       meta: [
         { title },
@@ -70,7 +70,7 @@ function ContactPage() {
         <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12">
           <div className="space-y-5">
             {[
-              { i: Phone, l: "Phone", v: "(724) 676-8738", h: "tel:+17246768738" },
+              { i: Phone, l: "Phone", v: "(724) 497-8681", h: "tel:+17246768738" },
               { i: Mail, l: "Email", v: "info@kellerheatingandcooling.com", h: "mailto:info@kellerheatingandcooling.com" },
               { i: MapPin, l: "Service Area", v: "Pittsburgh, PA & Surrounding Areas" },
               { i: Clock, l: "Hours", v: "24/7 Emergency · Office Mon–Sat 7am–7pm" },
@@ -80,18 +80,18 @@ function ContactPage() {
                 <div className="min-w-0"><div className="text-sm text-muted-foreground">{r.l}</div><div className="font-semibold text-primary">{r.v}</div></div>
               </a>
             ))}
-          <div className="rounded-2xl overflow-hidden shadow-card aspect-video relative">
-            <iframe
-              title="Keller Heating And Cooling Location - Beaver Falls, PA"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8002711232625!2d-80.33326!3d40.788404899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834656da46af8a1%3A0x875d20f8efee65c5!2sKeller%20Heating%20And%20Cooling%20LLC!5e0!3m2!1sen!2sus!4v1781763772775!5m2!1sen!2sus"
-              className="w-full h-full border-0"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            <div className="rounded-2xl overflow-hidden shadow-card aspect-video relative">
+              <iframe
+                title="Keller Heating And Cooling Location - Beaver Falls, PA"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8002711232625!2d-80.33326!3d40.788404899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834656da46af8a1%3A0x875d20f8efee65c5!2sKeller%20Heating%20And%20Cooling%20LLC!5e0!3m2!1sen!2sus!4v1781763772775!5m2!1sen!2sus"
+                className="w-full h-full border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
-          </div>
-          <form onSubmit={e=>{e.preventDefault();setSent(true);}} className="glass-card rounded-3xl p-8 space-y-4 h-fit">
+          <form onSubmit={e => { e.preventDefault(); setSent(true); }} className="glass-card rounded-3xl p-8 space-y-4 h-fit">
             <h2 className="text-2xl font-bold text-primary">Request Free Estimate</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <Input required placeholder="Full name *" aria-label="Full name" />
