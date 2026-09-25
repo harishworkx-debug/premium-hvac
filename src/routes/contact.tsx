@@ -38,7 +38,7 @@ export const Route = createFileRoute("/contact")({
   head: () => {
     const url = `${BASE_URL}/contact/`;
     const title = "Contact Us | Free HVAC Estimate - 24/7 Service | Keller Heating & Cooling";
-    const description = "Get a free HVAC estimate or call 24/7 for emergency AC, heating, or furnace service. Keller Heating And Cooling LLC serves Pittsburgh, Beaver Falls & surrounding areas. Call (724) 497-8681.";
+    const description = "Get a free HVAC estimate or call 24/7 for emergency AC, heating, or furnace service. Keller Heating And Cooling LLC serves Pittsburgh, Beaver Falls & surrounding areas. Call (724) 676-8738.";
     return {
       meta: [
         { title },
@@ -70,7 +70,7 @@ function ContactPage() {
         <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12">
           <div className="space-y-5">
             {[
-              { i: Phone, l: "Phone", v: "(724) 497-8681", h: "tel:+17244978681" },
+              { i: Phone, l: "Phone", v: "(724) 676-8738", h: "tel:+17244978681" },
               { i: Mail, l: "Email", v: "info@kellerheatingandcooling.com", h: "mailto:info@kellerheatingandcooling.com" },
               { i: MapPin, l: "Service Area", v: "Pittsburgh, PA & Surrounding Areas" },
               { i: Clock, l: "Hours", v: "24/7 Emergency · Office Mon–Sat 7am–7pm" },
