@@ -15,7 +15,7 @@ export function AcRepairPage({ data }: { data: any }) {
         sub="Fast, reliable AC repair for Beaver Falls homes. Our Expert techs diagnose accurately, quote upfront, and get your home cool again — fast."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
@@ -85,7 +85,7 @@ export function AcRepairPage({ data }: { data: any }) {
             <h2 className="text-3xl font-bold">Schedule AC Repair</h2>
             <p className="mt-3 text-white/80">Get your cooling system back online today.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Service</Link></Button>
             </div>
           </div>

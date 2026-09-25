@@ -170,7 +170,7 @@ function Hero() {
               <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
             </Button>
             <Button asChild variant="hero" size="xl">
-              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call Now: (724) 497-8681</a>
+              <a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call Now: (724) 497-8681</a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
@@ -272,7 +272,7 @@ function Commercial() {
               </Link>
             </Button>
             <Button asChild variant="hero" size="lg">
-              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a>
+              <a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a>
             </Button>
           </div>
         </div>
@@ -490,7 +490,7 @@ function CTABanner() {
             <h2 className="text-3xl md:text-5xl font-bold">Call Keller Heating & Cooling Today</h2>
             <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">Our emergency techs are standing by 24/7. No overtime fees. No surprises.</p>
             <Button asChild variant="cta" size="xl" className="mt-8">
-              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681 Now</a>
+              <a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681 Now</a>
             </Button>
           </div>
         </div>
@@ -506,7 +506,7 @@ function Contact() {
         <div>
           <SectionHead align="left" eyebrow="Get In Touch" title="Request a Free Estimate" sub="Tell us about your project and we'll get back to you within 30 minutes during business hours." />
           <div className="mt-8 space-y-5">
-            <InfoRow icon={Phone} label="Phone" value="(724) 497-8681" href="tel:+17246768738" />
+            <InfoRow icon={Phone} label="Phone" value="(724) 497-8681" href="tel:+17244978681" />
             <InfoRow icon={MapPin} label="Service Area" value="Pittsburgh, PA & Surrounding Areas" />
             <InfoRow icon={Clock} label="Business Hours" value="Mon–Sun · 24/7 Emergency Service" />
           </div>

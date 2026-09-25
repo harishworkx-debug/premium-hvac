@@ -12,7 +12,7 @@ export function EmergencyHvacPage({ data }: { data: any }) {
         sub="Fast, responsive emergency HVAC repair when you need it most. Our team is standing by to handle critical heating and cooling failures."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="xl" className="bg-red-600 hover:bg-red-700 text-white font-bold animate-pulse"><a href="tel:+17246768738"><Phone className="w-6 h-6 mr-2" /> CALL NOW: (724) 497-8681</a></Button>
+          <Button asChild variant="cta" size="xl" className="bg-red-600 hover:bg-red-700 text-white font-bold animate-pulse"><a href="tel:+17244978681"><Phone className="w-6 h-6 mr-2" /> CALL NOW: (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
@@ -22,7 +22,7 @@ export function EmergencyHvacPage({ data }: { data: any }) {
           <h2 className="text-4xl font-bold text-primary">HVAC Emergency Service Beaver Falls</h2>
           <p className="text-xl text-muted-foreground">Don't wait for business hours. If your HVAC system has failed completely, is leaking heavily, or poses a safety risk, call us immediately.</p>
           <div className="py-6">
-            <Button asChild variant="cta" size="xl" className="text-2xl py-8 px-12 rounded-full shadow-xl"><a href="tel:+17246768738"><Phone className="w-8 h-8 mr-3" /> (724) 497-8681</a></Button>
+            <Button asChild variant="cta" size="xl" className="text-2xl py-8 px-12 rounded-full shadow-xl"><a href="tel:+17244978681"><Phone className="w-8 h-8 mr-3" /> (724) 497-8681</a></Button>
           </div>
         </div>
       </section>
@@ -59,7 +59,7 @@ export function EmergencyHvacPage({ data }: { data: any }) {
             <h2 className="text-3xl font-bold text-red-700 flex items-center justify-center gap-3"><Clock className="w-8 h-8" /> Need Help Now?</h2>
             <p className="mt-3 text-red-900/80 text-lg">Our technicians are available for rapid dispatch.</p>
             <div className="mt-6">
-              <Button asChild variant="destructive" size="xl" className="shadow-lg"><a href="tel:+17246768738">Call (724) 497-8681</a></Button>
+              <Button asChild variant="destructive" size="xl" className="shadow-lg"><a href="tel:+17244978681">Call (724) 497-8681</a></Button>
             </div>
           </div>
 
