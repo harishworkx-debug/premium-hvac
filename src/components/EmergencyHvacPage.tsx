@@ -51,7 +51,7 @@ export function EmergencyHvacPage({ data }: { data: any }) {
             <ul className="mt-4 space-y-4 text-muted-foreground">
               <li><strong>1. Turn off the system:</strong> If you smell gas, suspect an electrical fire, or see heavy water leaking, turn off the system at the breaker or gas valve immediately.</li>
               <li><strong>2. Evacuate if necessary:</strong> If you suspect carbon monoxide or a gas leak, leave the house and call the gas company or 911.</li>
-              <li><strong>3. Call Keller Heating & Cooling:</strong> Dial (724) 497-8681 for our emergency dispatch. Describe the issue so we can prioritize your call.</li>
+              <li><strong>3. Call Keller Heating & Cooling:</strong> Dial (724) 676-8738for our emergency dispatch. Describe the issue so we can prioritize your call.</li>
             </ul>
           </div>
 

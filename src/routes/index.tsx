@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
     const description = "Keller Heating And Cooling LLC: Premium HVAC contractor for AC repair, heating installation, furnace service & indoor air quality. 24/7 emergency service, free estimates. Licensed & insured. Call (724) 676-8738.";
 =======
     const title = "HVAC Contractor in Beaver Falls, PA | Keller Heating & Cooling";
-    const description = "Keller Heating & Cooling provides expert HVAC contractor services in Beaver Falls, PA. Call (724) 497-8681 for fast AC repair, heating repair, and 24/7 emergency HVAC service.";
+    const description = "Keller Heating & Cooling provides expert HVAC contractor services in Beaver Falls, PA. Call (724) 676-8738for fast AC repair, heating repair, and 24/7 emergency HVAC service.";
 >>>>>>> f7d748cbfb4c0881ba151d8b75086995f1bd2906
     return {
       meta: [
