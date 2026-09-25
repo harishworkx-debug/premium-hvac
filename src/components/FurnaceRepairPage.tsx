@@ -15,7 +15,7 @@ export function FurnaceRepairPage({ data }: { data: any }) {
         sub="Fast furnace repair when temperatures drop. Our techs carry the most common parts on every truck, so most repairs happen on the first visit."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
@@ -70,7 +70,7 @@ export function FurnaceRepairPage({ data }: { data: any }) {
             <h2 className="text-3xl font-bold">Schedule Your Furnace Repair Today</h2>
             <p className="mt-3 text-white/80">Don't suffer in the cold. Contact our Beaver Falls heating experts now.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Service</Link></Button>
             </div>
           </div>

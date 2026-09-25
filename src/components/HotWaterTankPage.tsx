@@ -12,7 +12,7 @@ export function HotWaterTankPage({ data }: { data: any }) {
         sub="Professional water heater replacement and repair. Fast, code-compliant installations for both traditional tanks and modern tankless systems."
       >
         <div className="flex flex-wrap gap-3">
-          <Button asChild variant="cta" size="lg"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+          <Button asChild variant="cta" size="lg"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
         </div>
       </PageHero>
 
@@ -49,7 +49,7 @@ export function HotWaterTankPage({ data }: { data: any }) {
             <h2 className="text-3xl font-bold">Need a New Hot Water Tank?</h2>
             <p className="mt-3 text-white/80">Contact us today for a fast, upfront quote on water heater replacement.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Service</Link></Button>
             </div>
           </div>

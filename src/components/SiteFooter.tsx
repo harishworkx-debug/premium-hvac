@@ -49,12 +49,12 @@ export function SiteFooter() {
           <h4 className="font-semibold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-white/80">
 <<<<<<< HEAD
-            <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 text-accent"/> <a href="tel:+17244978681">(724) 676-8738</a></li>
+            <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 text-accent"/> <a href="tel:+17246768738">(724) 676-8738</a></li>
             <li className="flex items-start gap-2"><Mail className="w-4 h-4 mt-0.5 text-accent"/> info@kellerheatingandcooling.com</li>
             <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent"/> Pittsburgh, PA</li>
             <li className="flex gap-3 pt-2 text-white/70"><Facebook className="w-5 h-5"/><Instagram className="w-5 h-5"/></li>
 =======
-            <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 text-accent" /> <a href="tel:+17244978681">(724) 497-8681</a></li>
+            <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 text-accent" /> <a href="tel:+17246768738">(724) 497-8681</a></li>
             <li className="flex items-start gap-2"><Mail className="w-4 h-4 mt-0.5 text-accent" /> info@kellerheatingandcooling.com</li>
             <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent" /> Pittsburgh, PA</li>
             <li className="flex gap-3 pt-2 text-white/70"><Facebook className="w-5 h-5" /><Instagram className="w-5 h-5" /></li>
