@@ -43,8 +43,8 @@ const homePageSchema = {
 export const Route = createFileRoute("/")({
   head: () => {
     const url = `${BASE_URL}/`;
-    const title = "HVAC Contractor in Beaver Falls, PA | AC Repair & Heating Services";
-    const description = "Keller Heating And Cooling LLC: Premium HVAC contractor for AC repair, heating installation, furnace service & indoor air quality. 24/7 emergency service, free estimates. Licensed & insured. Call (724) 497-8681.";
+    const title = "HVAC Contractor in Beaver Falls, PA | Keller Heating & Cooling";
+    const description = "Keller Heating & Cooling provides expert HVAC contractor services in Beaver Falls, PA. Call (724) 676-8738 for fast AC repair, heating repair, and 24/7 emergency HVAC service.";
     return {
       meta: [
         { title },
@@ -122,6 +122,9 @@ function HomePage() {
       <Hero />
       <TrustedBy />
       <Services />
+      <ACServices />
+      <HeatingServices />
+      <EmergencyService />
       <WhyChoose />
       <Process />
       <Commercial />
@@ -149,7 +152,7 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" /> 24/7 Emergency HVAC Service
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-            Reliable HVAC Services <span className="text-gradient">You Can Trust</span> in Beaver Falls, PA.
+            HVAC Contractor in Beaver Falls, PA for <span className="text-gradient">AC & Heating Service</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
             Professional heating, cooling, ventilation, repair, installation & maintenance services for homes and businesses across Greater Pittsburgh.
@@ -164,7 +167,7 @@ function Hero() {
               <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
             </Button>
             <Button asChild variant="hero" size="xl">
-              <a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call Now: (724) 497-8681</a>
+              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call Now: (724) 676-8738</a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
@@ -203,7 +206,7 @@ function Services() {
   return (
     <section className="section" id="services">
       <div className="container-px mx-auto max-w-7xl">
-        <SectionHead eyebrow="Our Services" title="Complete HVAC Solutions Under One Roof" sub="From emergency repairs to full system installs, our certified technicians handle every heating, cooling and air quality need with precision." />
+        <SectionHead eyebrow="Our Services" title="Trusted HVAC Services in Beaver Falls, PA" sub="From emergency repairs to full system installs, our certified technicians handle every heating, cooling and air quality need with precision." />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map(s => (
             <Card key={s.title} className="hover-lift p-7 border-border/60 rounded-2xl">
@@ -242,7 +245,7 @@ function Commercial() {
             <Building2 className="w-3.5 h-3.5" /> Commercial HVAC Services
           </span>
           <h2 className="mt-4 text-3xl md:text-5xl font-bold text-primary leading-tight">
-            Commercial HVAC <span className="text-gradient">Built for Uptime</span>
+            Commercial HVAC Services
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
             Keep your business comfortable, code-compliant and running 24/7. From single rooftop units to multi-site preventive maintenance contracts, our commercial team delivers responsive service backed by a single point of contact.
@@ -266,7 +269,7 @@ function Commercial() {
               </Link>
             </Button>
             <Button asChild variant="hero" size="lg">
-              <a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a>
+              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a>
             </Button>
           </div>
         </div>
@@ -295,7 +298,7 @@ function WhyChoose() {
   return (
     <section className="section bg-surface-soft">
       <div className="container-px mx-auto max-w-7xl">
-        <SectionHead eyebrow="Why Choose Keller Heating & Cooling" title="The Premium Standard in HVAC Service" sub="What you get with every single visit — no exceptions." />
+        <SectionHead eyebrow="Why Choose Keller Heating & Cooling" title="Why Choose Keller Heating & Cooling" sub="What you get with every single visit — no exceptions." />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {why.map(w => (
             <div key={w.title} className="glass-card rounded-2xl p-6 hover-lift">
@@ -364,7 +367,7 @@ function ServiceAreas() {
     <section className="section">
       <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <SectionHead align="left" eyebrow="Service Area" title="Proudly Serving the Pittsburgh Metro" sub="Same-day service in 30+ neighborhoods across the Greater Pittsburgh area." />
+          <SectionHead align="left" eyebrow="Service Area" title="Serving Beaver Falls and Surrounding Pennsylvania Communities" sub="Same-day service in 30+ neighborhoods across the Greater Pittsburgh area." />
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2">
             {homeCities.map(c => (
               <Link key={c.slug} to="/$slug" params={{ slug: `ac-repair-${c.slug}-pa` }} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-soft hover:bg-teal/10 text-sm font-medium text-primary transition-colors">
@@ -481,10 +484,10 @@ function CTABanner() {
           <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-accent/30 blur-3xl" />
           <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-teal/30 blur-3xl" />
           <div className="relative">
-            <h2 className="text-3xl md:text-5xl font-bold">Need HVAC Service Today?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold">Call Keller Heating & Cooling Today</h2>
             <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">Our emergency techs are standing by 24/7. No overtime fees. No surprises.</p>
             <Button asChild variant="cta" size="xl" className="mt-8">
-              <a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681 Now</a>
+              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738 Now</a>
             </Button>
           </div>
         </div>
@@ -500,7 +503,7 @@ function Contact() {
         <div>
           <SectionHead align="left" eyebrow="Get In Touch" title="Request a Free Estimate" sub="Tell us about your project and we'll get back to you within 30 minutes during business hours." />
           <div className="mt-8 space-y-5">
-            <InfoRow icon={Phone} label="Phone" value="(724) 497-8681" href="tel:+17244978681" />
+            <InfoRow icon={Phone} label="Phone" value="(724) 676-8738" href="tel:+17246768738" />
             <InfoRow icon={MapPin} label="Service Area" value="Pittsburgh, PA & Surrounding Areas" />
             <InfoRow icon={Clock} label="Business Hours" value="Mon–Sun · 24/7 Emergency Service" />
           </div>
@@ -549,5 +552,70 @@ export function SectionHead({ eyebrow, title, sub, align="center" }: { eyebrow: 
       <h2 className="mt-4 text-3xl md:text-5xl font-bold text-primary">{title}</h2>
       {sub && <p className="mt-4 text-lg text-muted-foreground">{sub}</p>}
     </div>
+  );
+}
+
+
+function ACServices() {
+  const acList = [
+    { title: "AC Repair", slug: "ac-repair-beaver-falls-pa", desc: "Fast, accurate diagnostics and repairs." },
+    { title: "AC Installation", slug: "ac-installation-beaver-falls-pa", desc: "Energy-efficient central air and ductless systems." },
+    { title: "AC Replacement", slug: "ac-installation-beaver-falls-pa", desc: "Upgrade to a high-SEER system to lower bills." },
+    { title: "AC Maintenance", slug: "ac-maintenance-beaver-falls-pa", desc: "Annual tune-ups to prevent breakdowns." },
+    { title: "Emergency AC Service", slug: "emergency-hvac-beaver-falls-pa", desc: "24/7 emergency response when you need it most." }
+  ];
+  return (
+    <section className="section bg-surface-soft">
+      <div className="container-px mx-auto max-w-7xl">
+        <SectionHead eyebrow="Cooling" title="Air Conditioning Services" sub="Stay cool all summer with our comprehensive AC services." />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {acList.map(s => (
+            <Card key={s.title} className="p-6 hover-lift border-border/60">
+              <h3 className="text-lg font-bold"><Link to="/$slug" params={{ slug: s.slug }} className="text-primary hover:text-teal">{s.title}</Link></h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HeatingServices() {
+  const heatingList = [
+    { title: "Heating Repair", slug: "heating-repair-beaver-falls-pa", desc: "Fast repair for all heating systems." },
+    { title: "Furnace Repair", slug: "furnace-repair-beaver-falls-pa", desc: "Gas and electric furnace troubleshooting." },
+    { title: "Furnace Installation", slug: "furnace-installation-beaver-falls-pa", desc: "High-efficiency furnace replacements." },
+    { title: "Furnace Maintenance", slug: "furnace-maintenance-beaver-falls-pa", desc: "Keep your furnace safe and efficient." },
+    { title: "Heat Pump Repair", slug: "heat-pump-repair-beaver-falls-pa", desc: "Specialized heat pump diagnostics." },
+    { title: "Heat Pump Installation", slug: "heat-pump-installation-beaver-falls-pa", desc: "Versatile heating and cooling systems." }
+  ];
+  return (
+    <section className="section">
+      <div className="container-px mx-auto max-w-7xl">
+        <SectionHead eyebrow="Heating" title="Heating Services" sub="Reliable warmth for Beaver Falls winters." />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {heatingList.map(s => (
+            <Card key={s.title} className="p-6 hover-lift border-border/60">
+              <h3 className="text-lg font-bold"><Link to="/$slug" params={{ slug: s.slug }} className="text-primary hover:text-teal">{s.title}</Link></h3>
+              <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EmergencyService() {
+  return (
+    <section className="section bg-surface-soft">
+      <div className="container-px mx-auto max-w-7xl text-center">
+        <SectionHead eyebrow="24/7 Support" title="24/7 Emergency HVAC Service" sub="We are here for you any time of day or night." />
+        <Button asChild variant="cta" size="xl" className="mt-8">
+          <Link to="/$slug" params={{ slug: "emergency-hvac-beaver-falls-pa" }}>Request Emergency Service</Link>
+        </Button>
+      </div>
+    </section>
   );
 }

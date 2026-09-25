@@ -12,7 +12,7 @@ const emergencySchema = {
       "@type": "ServicePage",
       "@id": `${BASE_URL}/emergency/#webpage`,
       name: "24/7 Emergency HVAC Service | Keller Heating And Cooling LLC",
-      description: "24/7 emergency HVAC repair service in Pittsburgh. No overtime fees, same-hour dispatch, fully stocked trucks. Call (724) 497-8681 for immediate assistance.",
+      description: "24/7 emergency HVAC repair service in Pittsburgh. No overtime fees, same-hour dispatch, fully stocked trucks. Call (724) 676-8738 for immediate assistance.",
       url: `${BASE_URL}/emergency/`,
       isPartOf: { "@id": `${BASE_URL}/#website` },
     },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/emergency")({
   head: () => {
     const url = `${BASE_URL}/emergency/`;
     const title = "24/7 Emergency HVAC Service in Pittsburgh | No Overtime Fees";
-    const description = "Emergency HVAC repair available 24/7. Furnace down? AC broken? Keller Heating And Cooling LLC responds within 60 minutes. No overtime fees, flat-rate pricing. Call (724) 497-8681.";
+    const description = "Emergency HVAC repair available 24/7. Furnace down? AC broken? Keller Heating And Cooling LLC responds within 60 minutes. No overtime fees, flat-rate pricing. Call (724) 676-8738.";
     return {
       meta: [
         { title },
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/emergency")({
   component: () => (
     <>
       <PageHero eyebrow="Emergency" title="24/7 Emergency HVAC Service" sub="No heat? No cooling? Strange smells or sounds? Call us now — real humans answering, real techs dispatched within the hour.">
-        <Button asChild variant="cta" size="xl"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+        <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
       </PageHero>
       <section className="section">
         <div className="container-px mx-auto max-w-5xl grid sm:grid-cols-3 gap-5">
@@ -112,7 +112,7 @@ export const Route = createFileRoute("/emergency")({
             <h3 className="text-2xl md:text-3xl font-bold">Need Emergency HVAC Service Now?</h3>
             <p className="mt-3 text-white/80">Real humans answer 24/7. No automated menus, no waiting.</p>
             <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild variant="cta" size="xl"><a href="tel:+17244978681"><Phone className="w-5 h-5" /> Call (724) 497-8681</a></Button>
+              <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
               <Button asChild variant="hero" size="xl"><Link to="/contact">Request Callback</Link></Button>
             </div>
           </div>

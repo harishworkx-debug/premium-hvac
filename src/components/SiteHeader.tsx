@@ -65,8 +65,8 @@ export function SiteHeader() {
           <Link to="/contact" className="text-foreground/80 hover:text-primary transition-colors" activeProps={{ className: "text-primary" }}>Contact</Link>
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a href="tel:+17244978681" className="flex items-center gap-2 text-sm font-semibold text-primary">
-            <Phone className="w-4 h-4 text-teal" /> (724) 497-8681
+          <a href="tel:+17246768738" className="flex items-center gap-2 text-sm font-semibold text-primary">
+            <Phone className="w-4 h-4 text-teal" /> (724) 676-8738
           </a>
           <Button asChild variant="cta" size="sm">
             <Link to="/contact">Free Estimate</Link>
@@ -110,8 +110,8 @@ export function SiteHeader() {
             <Link to="/reviews" onClick={() => setOpen(false)} className="py-2 font-medium">Reviews</Link>
             <Link to="/about" onClick={() => setOpen(false)} className="py-2 font-medium">About</Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="py-2 font-medium">Contact</Link>
-            <a href="tel:+17244978681" className="flex items-center gap-2 font-semibold text-primary">
-              <Phone className="w-4 h-4" /> (724) 497-8681
+            <a href="tel:+17246768738" className="flex items-center gap-2 font-semibold text-primary">
+              <Phone className="w-4 h-4" /> (724) 676-8738
             </a>
           </div>
         </div>
